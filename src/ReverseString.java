@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ReverseString {
-     public static void main(String[]args) {
+    public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
             System.out.println("Enter the String");
             var input = sc.nextLine();

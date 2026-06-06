@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class RemoveDuplicatesAndPrintString {
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
@@ -6,7 +7,9 @@ public class RemoveDuplicatesAndPrintString {
             var result = new StringBuilder();
             for (var i = 0; i < s.length(); i++) {
                 var ch = s.charAt(i);
-                if (result.indexOf(String.valueOf(ch)) == -1) { result.append(ch); }
+                if (result.indexOf(String.valueOf(ch)) == -1) {
+                    result.append(ch);
+                }
             }
             System.out.println("Original: " + s);
             System.out.println("Without duplicates: " + result.toString());

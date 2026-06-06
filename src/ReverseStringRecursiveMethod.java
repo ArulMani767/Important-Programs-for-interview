@@ -1,7 +1,7 @@
 
 public class ReverseStringRecursiveMethod {
 
-	public static String reverse(String s) {
+    public static String reverse(String s) {
         if (s.isEmpty()) {
             return s;
         }

@@ -1,11 +1,22 @@
+import java.util.Scanner;
+
 public class WhiteSpacesinString {
     public static void main(String[] args) {
-        String input = "a b  c";
-        String output ="";
-        for(int i=0; i<input.length(); i++) {
-            char ch = input.charAt(i);
-            if(ch!=' '&& ch!='\t') { output+=ch; }
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter a string with whitespaces: ");
+            String input = scanner.nextLine();
+            char[] ch = input.toCharArray();
+            StringBuilder output = new StringBuilder();
+
+            // Loop through the input to filter out spaces and tabs
+            for (int i = 0; i < ch.length; i++) {
+                if (ch[i] != ' ' && ch[i] != '\t') {
+                    output.append(ch[i]);
+                }
+            }
+
+            System.out.println("String without whitespace: " + output);
         }
-        System.out.println(output);
     }
 }
+
