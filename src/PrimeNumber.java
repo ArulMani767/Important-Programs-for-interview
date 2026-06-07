@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.stream.*;
 
 public class PrimeNumber {
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class PalindromeNumber {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try(Scanner scanner = new Scanner(System.in)){
         int number = scanner.nextInt();
         int originalNumber = number, reversedNumber = 0;
         while (number != 0) {
@@ -15,5 +15,6 @@ public class PalindromeNumber {
         } else {
             System.out.println("not palindrome");
         }
+    }
     }
 }

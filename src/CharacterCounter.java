@@ -1,6 +1,5 @@
-import java.util.Map;
-import java.util.Scanner;
-import java.util.stream.Collectors;
+import java.util.*;
+import java.util.stream.*;
 
 public class CharacterCounter {
     public static void main(String[] args) {

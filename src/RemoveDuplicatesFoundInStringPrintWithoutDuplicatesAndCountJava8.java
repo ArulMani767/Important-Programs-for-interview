@@ -8,5 +8,6 @@ public class RemoveDuplicatesFoundInStringPrintWithoutDuplicatesAndCountJava8 {
         Map<Character, Long> counts = input.chars().mapToObj(c -> (char) c)
                 .collect(Collectors.groupingBy(c -> c, LinkedHashMap::new, Collectors.counting()));
         System.out.println(unique);
+        System.out.println(counts);
     }
 }

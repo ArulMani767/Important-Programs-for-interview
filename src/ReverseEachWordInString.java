@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class ReverseEachWordInString {
     public static void main(String[] args) {
         String input = "Java programming";
