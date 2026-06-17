@@ -10,8 +10,11 @@ public class StringLengthWithoutLength {
                 count++; 
 
             }
-            var count_val = str.chars().count();
-            System.out.println("Length of the string: " + count_val);
+            System.out.println("Length of the string: " + count);
+
+            // using streams
+            //var count_val = str.chars().count();
+            //System.out.println("Length of the string: " + count_val);
         }
     }
 }
