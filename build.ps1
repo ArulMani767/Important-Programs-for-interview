@@ -1,16 +1,30 @@
-# Build script: compiles all Java sources under src into bin with lint
+# Maven Build Script for Important Programs
+# This project now uses Maven for dependency management and builds
+
 $root = Get-Location
-$src = Join-Path $root 'src'
-$bin = Join-Path $root 'bin'
-if (-Not (Test-Path $bin)) { New-Item -ItemType Directory -Path $bin | Out-Null }
-$files = Get-ChildItem -Path $src -Recurse -Filter *.java | ForEach-Object { $_.FullName }
-if ($files) {
-    javac -d $bin -Xlint:all $files
-    if ($LASTEXITCODE -eq 0) {
-        Write-Output 'Build completed successfully.'
-    } else {
-        Write-Output 'Build finished with warnings/errors. Check output above.'
-    }
+$mvnHome = $env:M2_HOME
+$javaBin = $env:JAVA_HOME
+
+# Check if Maven is available
+$mvnCmd = if (Get-Command mvn -ErrorAction SilentlyContinue) { 'mvn' } else { $null }
+
+if (-Not $mvnCmd) {
+    Write-Host "⚠️  Maven not found in PATH" -ForegroundColor Yellow
+    Write-Host "Please install Maven:"
+    Write-Host "1. Download from https://maven.apache.org/download.cgi"
+    Write-Host "2. Extract to a folder"
+    Write-Host "3. Add bin folder to your PATH environment variable"
+    Write-Host "4. Run this script again"
+    exit 1
+}
+
+Write-Host "📦 Building with Maven..." -ForegroundColor Cyan
+& mvn clean compile
+
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "✅ Build completed successfully!" -ForegroundColor Green
+    Write-Host "Output: target/classes" -ForegroundColor Green
 } else {
-    Write-Output 'No Java files found to compile.'
+    Write-Host "❌ Build failed. Check errors above." -ForegroundColor Red
+    exit 1
 }

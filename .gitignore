@@ -1,4 +1,45 @@
-bin/
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Compiled files
 *.class
 bin/
-*.class
+
+# IDE
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Build artifacts
+build/
+dist/
+
+# Others
+.gradle/
+*.exe
+*.dll
+*.so
+move-*.txt
+move-files.ps1
+build-output.txt
+
