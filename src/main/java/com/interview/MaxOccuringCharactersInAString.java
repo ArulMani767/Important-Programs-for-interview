@@ -5,7 +5,7 @@ import java.util.stream.*;
 
 public class MaxOccuringCharactersInAString {
 
-    // String input = "java";
+    // String input = "java"; it is also called as most repeated or repetitive character in a string
     public static void main(String[] args) {
         // Try-with-resources cleanly manages the scanner instance automatically
         try (var sc = new Scanner(System.in)) {
