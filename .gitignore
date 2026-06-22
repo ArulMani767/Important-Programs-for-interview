@@ -43,3 +43,4 @@ move-*.txt
 move-files.ps1
 build-output.txt
 
+.continue/mcpServers/new-mcp-server.yaml
