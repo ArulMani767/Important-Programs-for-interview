@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.Scanner;
 public class ArmstrongNumber {
     public static void main(String[] args) {
@@ -16,3 +18,4 @@ public class ArmstrongNumber {
         scanner.close();
     }
 }
+

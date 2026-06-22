@@ -1,3 +1,5 @@
+package com.interview;
+
 
 import java.util.stream.*;
 
@@ -9,3 +11,4 @@ public class DuplicateCharactersInAString {
         counts.entrySet().stream().filter(e -> e.getValue() > 1).forEach(System.out::println);
     }
 }
+

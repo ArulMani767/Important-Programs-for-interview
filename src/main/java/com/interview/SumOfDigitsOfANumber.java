@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.*;
 public class SumOfDigitsOfANumber {
     public static void main(String[] args) {
@@ -14,3 +16,4 @@ public class SumOfDigitsOfANumber {
     }
     }
 }
+

@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.*;
 import java.util.stream.*;
 
@@ -9,3 +11,4 @@ public class MaxOccuringCharactersInAArray {
         System.out.println(max.getKey());
     }
 }
+

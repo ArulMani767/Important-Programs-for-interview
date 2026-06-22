@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.List;
 
 public class ReadOnlyCollection {
@@ -6,3 +8,4 @@ public class ReadOnlyCollection {
         System.out.println(readOnly);
     }
 }
+

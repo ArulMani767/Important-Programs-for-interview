@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.Scanner;
 
 public class WhiteSpacesinString {
@@ -19,4 +21,5 @@ public class WhiteSpacesinString {
         }
     }
 }
+
 

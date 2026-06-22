@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.Scanner;
 
 public class RemoveDuplicatesAndPrintString {
@@ -16,3 +18,4 @@ public class RemoveDuplicatesAndPrintString {
         }
     }
 }
+

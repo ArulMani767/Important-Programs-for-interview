@@ -1,3 +1,5 @@
+package com.interview;
+
 public class AnaagramProgramWithIterativeLoops {
 	
 	static void  anagramprogram(String s1, String s2) {
@@ -38,3 +40,4 @@ public class AnaagramProgramWithIterativeLoops {
 	}
 
 }
+

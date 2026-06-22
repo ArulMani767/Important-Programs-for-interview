@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.*;
 
 public class CountNoOfWordsInAStringNoLengthMethod {
@@ -16,3 +18,4 @@ public class CountNoOfWordsInAStringNoLengthMethod {
         }
     }
 }
+

@@ -1,3 +1,5 @@
+package com.interview;
+
 
 public class RemoveVowelsInString {
     public static void main(String[] args) {
@@ -5,3 +7,4 @@ public class RemoveVowelsInString {
         System.out.println(s.replaceAll("[AEIOUaeiou]", ""));
     }
 }
+

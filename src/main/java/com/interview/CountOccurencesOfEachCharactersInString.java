@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.stream.*;
 
 public class CountOccurencesOfEachCharactersInString {
@@ -8,3 +10,4 @@ public class CountOccurencesOfEachCharactersInString {
         System.out.println(charCounts);
     }
 }
+

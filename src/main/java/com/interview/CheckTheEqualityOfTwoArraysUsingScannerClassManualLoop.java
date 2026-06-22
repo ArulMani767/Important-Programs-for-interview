@@ -1,3 +1,5 @@
+package com.interview;
+
 
 public class CheckTheEqualityOfTwoArraysUsingScannerClassManualLoop {
     public static void main(String[] args) {
@@ -14,3 +16,4 @@ public class CheckTheEqualityOfTwoArraysUsingScannerClassManualLoop {
         System.out.println(equal);
     }
 }
+

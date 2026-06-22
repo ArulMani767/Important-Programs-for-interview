@@ -1,3 +1,5 @@
+package com.interview;
+
 public class SwapStrings {
     public static void main(String[] args) {
         String s1="A", s2="B";
@@ -7,3 +9,4 @@ public class SwapStrings {
         System.out.println(s1 + " " + s2);
     }
 }
+

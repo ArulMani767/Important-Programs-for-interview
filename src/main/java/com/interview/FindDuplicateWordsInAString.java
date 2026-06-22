@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.*;
 import java.util.stream.*;
 
@@ -11,3 +13,4 @@ public class FindDuplicateWordsInAString {
         System.out.println(duplicates);
     }
 }
+

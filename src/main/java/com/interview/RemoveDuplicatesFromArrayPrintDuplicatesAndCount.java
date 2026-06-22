@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Scanner;
@@ -32,3 +34,4 @@ public class RemoveDuplicatesFromArrayPrintDuplicatesAndCount {
     }
 
 }
+

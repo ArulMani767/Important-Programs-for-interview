@@ -1,3 +1,5 @@
+package com.interview;
+
 
 
 public class EqualityOfTwoArrays {
@@ -13,3 +15,4 @@ public class EqualityOfTwoArrays {
         System.out.println(equal);
     }
 }
+

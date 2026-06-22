@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.Arrays;
 
 public class MergeTwoUnSortedArraysInSortedOrder {
@@ -30,3 +32,4 @@ public class MergeTwoUnSortedArraysInSortedOrder {
 	}
 
 }
+

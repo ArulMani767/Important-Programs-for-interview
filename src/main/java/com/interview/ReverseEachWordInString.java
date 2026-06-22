@@ -1,3 +1,5 @@
+package com.interview;
+
 public class ReverseEachWordInString {
     public static void main(String[] args) {
         String input = "Java programming";
@@ -6,3 +8,4 @@ public class ReverseEachWordInString {
         }
     }
 }
+

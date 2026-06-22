@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.stream.*;
 import java.util.*;
 
@@ -23,3 +25,4 @@ public class RemoveDuplicatesFoundInStringPrintWithoutDuplicatesAndCountJava8 {
         }
     }
 }
+

@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.Arrays;
 public class AnagramProgramMethod2 {
     static void check(String s1, String s2) {
@@ -6,3 +8,4 @@ public class AnagramProgramMethod2 {
         System.out.println(Arrays.equals(c1, c2));
     }
 }
+

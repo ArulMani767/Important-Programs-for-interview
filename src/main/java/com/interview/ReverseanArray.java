@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.*;
 
 public class ReverseanArray {
@@ -31,3 +33,4 @@ public class ReverseanArray {
 	}
 
 }
+

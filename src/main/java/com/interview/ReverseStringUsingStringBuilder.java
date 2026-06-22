@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.Scanner;
 
 public class ReverseStringUsingStringBuilder {
@@ -11,3 +13,4 @@ public class ReverseStringUsingStringBuilder {
     }
     }
 }
+

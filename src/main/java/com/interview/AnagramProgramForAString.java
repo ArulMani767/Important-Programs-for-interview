@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.Arrays;
 
 public class AnagramProgramForAString {
@@ -17,3 +19,4 @@ public class AnagramProgramForAString {
         }
     }
 }
+

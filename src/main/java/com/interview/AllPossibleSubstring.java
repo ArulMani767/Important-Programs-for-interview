@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.*;
 public class AllPossibleSubstring {
     static void subString(String input) {
@@ -16,3 +18,4 @@ public class AllPossibleSubstring {
        }
     }
 }
+

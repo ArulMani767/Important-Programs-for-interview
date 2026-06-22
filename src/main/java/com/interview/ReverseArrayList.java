@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,3 +9,4 @@ public class ReverseArrayList {
         System.out.println("Java 21 view: " + list.reversed());
     }
 }
+

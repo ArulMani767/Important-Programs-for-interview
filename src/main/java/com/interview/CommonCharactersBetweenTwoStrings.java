@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.stream.*;
 import java.util.Set;
 
@@ -9,3 +11,4 @@ public class CommonCharactersBetweenTwoStrings {
         System.out.println(commonChars);
     }
 }
+

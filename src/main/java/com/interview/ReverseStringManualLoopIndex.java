@@ -1,3 +1,5 @@
+package com.interview;
+
 public class ReverseStringManualLoopIndex {
     public static void main(String[] args) {
         String input = "abc";
@@ -8,3 +10,4 @@ public class ReverseStringManualLoopIndex {
         System.out.println(output);
     }
 }
+

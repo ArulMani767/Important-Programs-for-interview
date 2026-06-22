@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -9,3 +11,4 @@ public class CommonElementsBetweenTwoArraysUpdatedLogic {
         System.out.println(common);
     }
 }
+

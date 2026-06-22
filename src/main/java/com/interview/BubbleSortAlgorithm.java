@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.Arrays;
 
 public class BubbleSortAlgorithm {
@@ -25,3 +27,4 @@ public class BubbleSortAlgorithm {
 	}
 
 }
+

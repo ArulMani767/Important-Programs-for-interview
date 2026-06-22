@@ -1,3 +1,5 @@
+package com.interview;
+
 public class RemovedDuplicateUsingStringBuilder {
     public static void main(String[] args) {
         String input = "aapppllllee";
@@ -11,3 +13,4 @@ public class RemovedDuplicateUsingStringBuilder {
         System.out.println(result);
     }
 }
+

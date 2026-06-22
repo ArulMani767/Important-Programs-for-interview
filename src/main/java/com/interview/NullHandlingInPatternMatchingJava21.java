@@ -1,3 +1,5 @@
+package com.interview;
+
 public class NullHandlingInPatternMatchingJava21 {
     public static void main(String[] args) {
         Object obj = null;
@@ -8,3 +10,4 @@ public class NullHandlingInPatternMatchingJava21 {
         System.out.println(result);
     }
 }
+

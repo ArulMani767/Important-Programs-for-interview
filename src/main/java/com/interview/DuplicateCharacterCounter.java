@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.Scanner;
@@ -17,3 +19,4 @@ public class DuplicateCharacterCounter {
         }
     }
 }
+

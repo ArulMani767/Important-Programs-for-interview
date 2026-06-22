@@ -1,3 +1,5 @@
+package com.interview;
+
 import java.util.*;
 
 public class PrimeNumber {
@@ -15,3 +17,4 @@ public class PrimeNumber {
         sc.close();
     }
 }
+

@@ -1,3 +1,5 @@
+package com.interview;
+
 public class GuardedPatternAdvanced {
     public static void main(String[] args) {
         Object obj = 150;
@@ -9,3 +11,4 @@ public class GuardedPatternAdvanced {
         System.out.println(result);
     }
 }
+
