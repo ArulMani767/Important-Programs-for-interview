@@ -17,7 +17,7 @@ src/
 
 ## Prerequisites
 
-- **Java 21 or higher** - [Download JDK](https://www.oracle.com/java/technologies/downloads/)
+- **Java 21 or higher** - [Download JDK](https://docs.aws.amazon.com/corretto/)
 - **Maven 3.6+** - [Download Maven](https://maven.apache.org/download.cgi)
 
 ## Setup Instructions
@@ -39,9 +39,7 @@ mvn --version
 ```
 
 ### 3. Build the Project
-```powershell
-# Using the build script
-.\build.ps1
+
 
 # Or using Maven directly
 mvn clean compile
