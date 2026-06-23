@@ -41,8 +41,9 @@ Then open the cloned folder in your preferred IDE (see below).
 
 ### Eclipse
 
-1. Go to **File → Import → Git → Projects from Git → Clone URI** → Next
-2. In the **URI field**, paste:
+1. Go to **File → Import → Git → Projects from Git (with smart import)** → Next
+2. Select **Clone URI** → Next
+3. In the **URI field**, paste:
    ```
    https://github.com/ArulMani767/Important-Programs-for-interview.git
    ```
@@ -52,9 +53,10 @@ Then open the cloned folder in your preferred IDE (see below).
    > - **Repository path:** `/ArulMani767/Important-Programs-for-interview.git`
    >
    > If the Repository path looks duplicated or incorrect, click **Back**, clear the URI field (`Ctrl+A` → `Delete`), and paste the URL again.
-3. Enter your GitHub **username** and **Personal Access Token** as the password → Next
-4. Select branch **main** → Next
-5. Choose a local directory → **Finish**
+4. Enter your GitHub **username** and **Personal Access Token** as the password → Next
+5. Select branch **main** → Next
+6. Choose a local directory → Next
+7. Eclipse detects the project type automatically → **Finish**
 
 ---
 
