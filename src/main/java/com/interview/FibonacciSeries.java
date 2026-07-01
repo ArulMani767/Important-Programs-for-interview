@@ -3,6 +3,7 @@ package com.interview;
 import java.util.Scanner;
 
 public class FibonacciSeries {
+    //inputs 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
             System.out.print("Enter the number of terms to print: ");
