@@ -1,7 +1,7 @@
 package com.interview;
 
 import java.text.DecimalFormat;
-import java.util.Scanner;
+import java.util.*;
 
 public class FindPercentageOfUppercaseLowercaseDigitsAndSpecialCharactersInString {
     static void characterPercentage(String inputString) {

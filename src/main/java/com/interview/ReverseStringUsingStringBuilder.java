@@ -1,6 +1,6 @@
 package com.interview;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class ReverseStringUsingStringBuilder {
     public static void main(String[] args) {

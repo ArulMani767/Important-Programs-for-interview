@@ -1,7 +1,7 @@
 package com.interview;
 
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 //Enter the size of the array: 7
 //Enter 7 integers (separated by spaces or lines):

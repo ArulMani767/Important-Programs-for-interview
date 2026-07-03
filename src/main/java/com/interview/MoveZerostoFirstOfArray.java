@@ -1,7 +1,7 @@
 package com.interview;
 
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class MoveZerostoFirstOfArray {
     static void moveZerosToFront(int[] inputArray) {

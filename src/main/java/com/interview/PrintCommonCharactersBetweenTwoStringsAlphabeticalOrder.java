@@ -1,8 +1,8 @@
 package com.interview;
 
-import java.util.Scanner;
+import java.util.*;
 import java.util.TreeSet;
-import java.util.stream.Collectors;
+import java.util.stream.*;
 
 public class PrintCommonCharactersBetweenTwoStringsAlphabeticalOrder {
 
