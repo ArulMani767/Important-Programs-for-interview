@@ -2,8 +2,8 @@ package com.interview;
 
 import java.util.Arrays;
 import java.util.Map;
-import java.util.Scanner;
-import java.util.stream.Collectors;
+import java.util.*;
+import java.util.stream.*;
 
 public class RemoveDuplicatesFromArrayPrintDuplicatesAndCount {
 

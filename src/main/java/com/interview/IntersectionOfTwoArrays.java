@@ -1,9 +1,9 @@
 package com.interview;
 
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 import java.util.Set;
-import java.util.stream.Collectors;
+import java.util.stream.*;
 
 public class IntersectionOfTwoArrays {
     public static void main(String[] args) {

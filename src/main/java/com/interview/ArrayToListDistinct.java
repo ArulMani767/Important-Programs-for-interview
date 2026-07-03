@@ -1,6 +1,6 @@
 package com.interview;
 
-import java.util.Scanner;
+import java.util.*;
 import java.util.Arrays;
 
 public class ArrayToListDistinct {

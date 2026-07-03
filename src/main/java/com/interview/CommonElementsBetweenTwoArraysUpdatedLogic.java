@@ -1,7 +1,7 @@
 package com.interview;
 
 import java.util.*;
-import java.util.stream.Collectors;
+import java.util.stream.*;
 
 public class CommonElementsBetweenTwoArraysUpdatedLogic {
     public static void main(String[] args) {

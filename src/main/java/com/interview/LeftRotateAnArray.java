@@ -1,7 +1,7 @@
 package com.interview;
 
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 // usually rotate the array in left direction is also the other question for the below  program
 //int[] inputArray = {1, 2, 3, 4, 5};
