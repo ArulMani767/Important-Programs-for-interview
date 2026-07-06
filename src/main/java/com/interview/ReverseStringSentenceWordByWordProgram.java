@@ -2,7 +2,7 @@ package com.interview;
 
 import java.util.*;
 
-public class ReverseStringWordByWordProgram {
+public class ReverseStringSentenceWordByWordProgram {
 
     //inputs
         // String inputString = "Java is a programming language";

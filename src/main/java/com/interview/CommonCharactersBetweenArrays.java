@@ -12,12 +12,12 @@ public class CommonCharactersBetweenArrays {
             // Take input for the first array
             System.out.println("Enter elements for the first array (separated by spaces):");
             var input1 = sc.nextLine();
-            var s1 = input1.split("\\s+");
+            var s1 = input1.trim().split("\\s+");
 
             // Take input for the second array
             System.out.println("Enter elements for the second array (separated by spaces):");
             var input2 = sc.nextLine();
-            var s2 = input2.split("\\s+");
+            var s2 = input2.trim().split("\\s+");
 
             var set = new HashSet<String>();
 

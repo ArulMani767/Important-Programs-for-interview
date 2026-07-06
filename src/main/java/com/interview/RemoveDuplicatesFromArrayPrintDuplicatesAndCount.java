@@ -14,7 +14,7 @@ public class RemoveDuplicatesFromArrayPrintDuplicatesAndCount {
             sc.nextLine(); // consume newline
 
             System.out.println("Enter array elements (space-separated): ");
-            var input = sc.nextLine().split("\\s+");
+            var input = sc.nextLine().trim().split("\\s+");
 
             // Count occurrences of each element
             var elementCount = Arrays.stream(input)

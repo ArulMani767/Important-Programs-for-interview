@@ -6,16 +6,9 @@ public class ReverseanArray {
 	
 	public static void main(String[] args) {
 		try (var sc = new Scanner(System.in)) {
-	        System.out.println("Enter size of array:");
-	        var input = sc.nextInt();
-	        sc.nextLine(); // consume newline 
-
-	        var arr = new String[input]; 
-	        System.out.println("Enter elements of array:");
-	        for (var i = 0; i < input; i++) {
-	            arr[i] = sc.nextLine(); 
-	        }
-
+            System.out.println("Enter elements for the first array separated by spaces:");
+            var input1 = sc.nextLine();
+            var arr = input1.trim().split("\\s+");
 	        // Using StringBuilder because it is mutable, just like your ReverseString example
 	        var result = new StringBuilder();
 

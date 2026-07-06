@@ -9,11 +9,11 @@ public class IntersectionOfTwoArraysIterativeLoop {
         try (var sc = new Scanner(System.in)) {
             System.out.println("Enter elements for the first array (space-separated):");
             var inputLine1 = sc.nextLine();
-            var s1 = inputLine1.split("\\s+");
+            var s1 = inputLine1.trim().split("\\s+");
 
             System.out.println("Enter elements for the second array (space-separated):");
             var inputLine2 = sc.nextLine();
-            var s2 = inputLine2.split("\\s+");
+            var s2 = inputLine2.trim().split("\\s+");
 
             // Modernizing the HashSet definition using 'var'
             var set = new HashSet<String>();

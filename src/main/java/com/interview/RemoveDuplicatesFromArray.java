@@ -12,7 +12,7 @@ public class RemoveDuplicatesFromArray {
             var inputLine = sc.nextLine();
 
             // treat input as an array of elements
-            var inputArray = inputLine.split("\\s+");
+            var inputArray = inputLine.trim().split("\\s+");
 
             // Get the unique elements as a list (remove duplicates, preserve first occurrence order)
             var uniqueList = Arrays.stream(inputArray).distinct().toList();

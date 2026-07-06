@@ -8,27 +8,15 @@ public class CommonElementsBetweenTwoStringArrays {
         // Try-with-resources automatically manages the scanner's lifecycle
         try (var sc = new Scanner(System.in)) {
 
-            // 1. Configure input for the first String array
-            System.out.print("Enter the size of the first array: ");
-            var size1 = sc.nextInt();
-            sc.nextLine(); // Consume leftover newline
+            // 1. Input for the First String Array using space-separated format
+            System.out.println("Enter elements for the first array separated by spaces:");
+            var input1 = sc.nextLine();
+            var s1 = input1.trim().split("\\s+"); // Directly builds the first String[] array
 
-            var s1 = new String[size1];
-            System.out.println("Enter " + size1 + " strings for the first array (one per line):");
-            for (var i = 0; i < size1; i++) {
-                s1[i] = sc.nextLine();
-            }
-
-            // 2. Configure input for the second String array
-            System.out.print("Enter the size of the second array: ");
-            var size2 = sc.nextInt();
-            sc.nextLine(); // Consume leftover newline
-
-            var s2 = new String[size2];
-            System.out.println("Enter " + size2 + " strings for the second array (one per line):");
-            for (var i = 0; i < size2; i++) {
-                s2[i] = sc.nextLine();
-            }
+            // 2. Input for the Second String Array using space-separated format
+            System.out.println("Enter elements for the second array separated by spaces:");
+            var input2 = sc.nextLine();
+            var s2 = input2.trim().split("\\s+");
 
             // UNCHANGED LOGIC: Your functional stream filter intersection
             var set2 = Set.of(s2);
