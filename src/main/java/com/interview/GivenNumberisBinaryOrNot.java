@@ -3,6 +3,7 @@ package com.interview;
 import java.util.Scanner;
 
 public class GivenNumberisBinaryOrNot {
+    //inputs 10110101 is binary nuber and 123456 is not binary number
     static void isBinaryOrNot(int number) {
         // Initializing flag and copy variable using 'var'
         var isBinary = true;

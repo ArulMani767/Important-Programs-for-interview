@@ -1,11 +1,14 @@
 package com.interview;
 
-import java.util.Arrays;
 import java.util.*;
-import java.util.Set;
 import java.util.stream.*;
 
 public class IntersectionOfTwoArrays {
+    //inputs  String[] s1 = {"ONE", "TWO", "THREE", "FOUR", "FIVE", "FOUR"}; i1={1, 2, 3, 4, 5, 4}
+ 
+        //String[] s2 = {"THREE", "FOUR", "FIVE", "SIX", "SEVEN", "FOUR"}; i2={3, 4, 5, 6, 7, 4};
+
+        //intersection of two arrays and common elements between two arrays both are same 
     public static void main(String[] args) {
 
         // Try-with-resources to manage the scanner resource automatically
