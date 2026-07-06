@@ -9,10 +9,6 @@ public class RemoveDuplicatesFromArrayPrintDuplicatesAndCount {
 
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
-            System.out.println("Enter array size: ");
-            var size = sc.nextInt();
-            sc.nextLine(); // consume newline
-
             System.out.println("Enter array elements (space-separated): ");
             var input = sc.nextLine().trim().split("\\s+");
 

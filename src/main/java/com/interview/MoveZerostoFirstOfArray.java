@@ -1,50 +1,35 @@
 package com.interview;
 
-import java.util.Arrays;
 import java.util.*;
+import java.util.stream.IntStream;
 
 public class MoveZerostoFirstOfArray {
-    static void moveZerosToFront(int[] inputArray) {
-        // UNCHANGED LOGIC: Initializing counter to position of last element
-        var counter = inputArray.length - 1;
-
-        // Traversing the inputArray from right to left using 'var'
-        for (var i = inputArray.length - 1; i >= 0; i--) {
-            // If inputArray[i] is non-zero
-            if (inputArray[i] != 0) {
-                // Assigning inputArray[i] to inputArray[counter]
-                inputArray[counter] = inputArray[i];
-
-                // Decrementing the counter by 1
-                counter--;
-            }
-        }
-
-        // UNCHANGED LOGIC: Assigning 0 to remaining elements at the front
-        while (counter >= 0) {
-            inputArray[counter] = 0;
-            counter--;
-        }
-
-        System.out.println("Resulting Array: " + Arrays.toString(inputArray));
-    }
-
     public static void main(String[] args) {
-        // Try-with-resources handles automatic scanner closing implicitly
+        // Try-with-resources automatically manages the scanner's lifecycle
         try (var sc = new Scanner(System.in)) {
-            System.out.print("Enter the size of the array: ");
-            var size = sc.nextInt();
 
-            var userArray = new int[size];
-            System.out.println("Enter " + size + " integers (separated by spaces or lines):");
-            for (var i = 0; i < size; i++) {
-                userArray[i] = sc.nextInt();
-            }
+            // 1. Input for the integer array using space-separated format
+            System.out.println("Enter integer elements separated by spaces:");
+            var inputLine = sc.nextLine();
+            var arr = inputLine.trim().split("\\s+"); // Split the input string into an array of strings
 
-            System.out.println("\nOriginal Array: " + Arrays.toString(userArray));
+            // Directly builds the primitive int[] array from the space-separated input
+            // string
+            int[] inputArray = Arrays.stream(arr)
+                    .mapToInt(Integer::parseInt)
+                    .toArray();
 
-            // Execute your unchanged right-to-left shifting logic method
-            moveZerosToFront(userArray);
+            // OPTIMIZED LOGIC: Pure stream pipeline to separate and join arrays
+            // Step 1: Filter out all the zeros
+            var zeros = Arrays.stream(inputArray).filter(num -> num == 0);
+
+            // Step 2: Filter out all non-zero numbers
+            var nonZeros = Arrays.stream(inputArray).filter(num -> num != 0);
+
+            // Step 3: Glue them back together! Zeros go first, non-zeros go last.
+            int[] result = IntStream.concat(zeros, nonZeros).toArray();
+
+            System.out.println("Resulting Array: " + Arrays.toString(result));
         }
     }
 }

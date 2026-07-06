@@ -13,8 +13,10 @@ public class CountNoOfWordsInAStringNoLengthMethod {
                 for (var c: ch) {
                     count++;
                 }
-                System.out.println(count);
+               
             }
+
+             System.out.println(count);
         }
     }
 }
