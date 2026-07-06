@@ -13,7 +13,7 @@ public class FindDuplicatesFromArray {
             var inputLine = sc.nextLine();
 
             // Treat input as an array of elements
-            var inputArray = inputLine.split("\\s+");
+            var inputArray = inputLine.trim().split("\\s+");
 
             // Get all element counts (preserve order)
             var charcount = Arrays.stream(inputArray)

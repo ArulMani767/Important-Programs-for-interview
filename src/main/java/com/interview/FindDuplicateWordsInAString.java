@@ -14,7 +14,7 @@ public class FindDuplicateWordsInAString {
             var input = sc.nextLine();
 
             // UNCHANGED LOGIC: Step 1 - Split by spaces and group by frequency
-            Map<String, Long> wordCount = Arrays.stream(input.split("\\s+"))
+            Map<String, Long> wordCount = Arrays.stream(input.trim().split("\\s+"))
                     .collect(Collectors.groupingBy(word -> word, Collectors.counting()));
 
             // UNCHANGED LOGIC: Step 2 - Filter map entries where count > 1
