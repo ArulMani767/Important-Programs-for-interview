@@ -2,7 +2,7 @@ package com.interview;
 
 import java.text.DecimalFormat;
 import java.util.*;
-
+//inputs Tiger Runs @ The Speed Of 100 km/hour.
 public class FindPercentageOfUppercaseLowercaseDigitsAndSpecialCharactersInString {
     static void characterPercentage(String inputString) {
         // UNCHANGED LOGIC: Getting total number of characters
