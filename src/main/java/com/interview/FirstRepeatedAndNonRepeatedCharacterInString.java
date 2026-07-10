@@ -16,7 +16,7 @@ public class FirstRepeatedAndNonRepeatedCharacterInString {
             Map<Character, Long> charCountMap = input.chars()
                     .mapToObj(c -> (char) c)
                     .collect(Collectors.groupingBy(
-                            Function.identity(),
+                            e->e,
                             LinkedHashMap::new, // Crucial: maintains original string order
                             Collectors.counting()));
 

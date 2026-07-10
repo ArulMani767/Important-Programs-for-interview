@@ -14,7 +14,7 @@ public class LeftRotateAnArray {
 
             var inputArray = new int[size];
             System.out.println("Enter " + size + " array elements (separated by spaces or lines):");
-            for (var i = 0; i < size; i++) {
+            for (int i = 0; i < size; i++) {
                 inputArray[i] = sc.nextInt();
             }
 
@@ -24,7 +24,7 @@ public class LeftRotateAnArray {
             // Create a temporary array to store the shifted values
             var result = new int[size];
 
-            for (var i = 0; i < size; i++) {
+            for (int i = 0; i < size; i++) {
                 // LEFT SHIFT FORMULA (Adds size to handle negative remainder wrap-around)
                 var newPosition = (i - n + size) % size;
                 result[newPosition] = inputArray[i];

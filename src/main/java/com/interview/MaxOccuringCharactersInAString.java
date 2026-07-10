@@ -22,5 +22,5 @@ public class MaxOccuringCharactersInAString {
             System.out.println("Occurrences: " + max.getValue());
 
         }
-    }
+    } 
 }
