@@ -2,7 +2,7 @@ package com;
 
 import java.util.Scanner;
 
-public class SecondSmallestAndSmallestElementinIntegerArrayy {
+public class SecondSmallestAndSmallestElementinIntegerArray {
    // Size of the array: 5
     //inputs 3 7 3 8 4
     //Console Output:
