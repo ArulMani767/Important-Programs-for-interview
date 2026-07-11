@@ -8,16 +8,13 @@ public class CountNoOfWordsInAStringNoLengthMethod {
             System.out.println("enter the String");
             var input = sc.nextLine();
             var count = 0;
-            for (var i = 0; i <= 0; i++) {
-                var ch = input.toCharArray();
-                for (var c: ch) {
-                    count++;
-                }
-               
+
+            var ch = input.toCharArray();
+            for (var c : ch) {
+                count++;
             }
 
-             System.out.println(count);
+            System.out.println(count);
         }
     }
 }
-
