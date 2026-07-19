@@ -77,12 +77,6 @@ Collection of 80+ programs covering:
 - Pattern Matching
 - Number Operations (Prime, Armstrong, Fibonacci)
 
-### Selenium examples
-- **PrintLinks.java** - Opens a page with Selenium and prints unique anchor URLs.
-- The Selenium API is supplied by the `selenium-java` Maven dependency; this project does not redefine Selenium classes.
-
----
-
 ## Build Commands
 
 ### Using Maven
@@ -100,31 +94,6 @@ mvn package
 ### Direct Compilation
 ```bash
 cd src/main/java
-
-# Compile specific file
-javac org/openqa/selenium/ChromeOptions.java -d ../../../target/classes/
-
-# Compile all Selenium files
-javac org/openqa/selenium/*.java -d ../../../target/classes/
-```
-
----
-
-## Available ChromeOptions Methods
-
-The ChromeOptions class provides these convenience methods:
-- `disableNotifications()` - Block push notifications
-- `disablePopupBlocking()` - Allow popups
-- `disableInfobars()` - Remove Chrome info bars
-- `startMaximized()` - Start with maximized window
-- `disableExtensions()` - Disable browser extensions
-- `incognito()` - Enable private/incognito mode
-- `ignoreCertificateErrors()` - Bypass SSL errors
-- `allowRemoteOrigins()` - Allow remote origins
-- `setHeadless()` - Run without GUI
-- `setWindowSize(width, height)` - Set window dimensions
-
----
 
 ## Project Structure Guide
 
@@ -215,7 +184,6 @@ https://github.com/ArulMani767/Important-Programs-for-interview.git
 | Compilation failed | Run `mvn clean compile` |
 | Import errors in IDE | Run `mvn clean install` |
 | Java version error | Install JDK 21 or higher |
-| Selenium methods not found | Ensure pom.xml has correct Selenium version |
 
 ---
 
@@ -228,12 +196,6 @@ https://github.com/ArulMani767/Important-Programs-for-interview.git
 - Pattern Matching
 - Number Operations (Prime, Fibonacci, Armstrong)
 
-✅ **Selenium WebDriver Framework**
-- Simple WebDriver interface for browser control
-- Chrome browser automation support
-- Configuration management with convenience methods
-- Fluent API with method chaining
-
 ✅ **Maven Build System**
 - Automatic dependency management
 - Latest library versions
@@ -244,6 +206,5 @@ https://github.com/ArulMani767/Important-Programs-for-interview.git
 ## Learn More
 
 - [Java 21 Documentation](https://docs.oracle.com/en/java/javase/21/)
-- [Selenium Official Site](https://www.selenium.dev/)
 - [Maven Guide](https://maven.apache.org/guides/)
 - [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
