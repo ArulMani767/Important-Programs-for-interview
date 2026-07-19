@@ -1,4 +1,4 @@
-package org.openqa.selenium;
+package org.openqa.selenium.mock;
 
 public interface WebDriver {
     void get(String url);

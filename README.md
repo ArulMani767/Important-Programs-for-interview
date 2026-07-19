@@ -13,10 +13,10 @@ JavaImportantPrograms/
 │   │   ├── PrimeNumber.java
 │   │   └── ... (more programs)
 │   │
-│   └── org/openqa/selenium/        ← Selenium Framework
-│       ├── WebDriver.java          (Interface for browser control)
-│       ├── ChromeOptions.java      (Chrome browser configuration)
-│       └── ChromeDriver.java       (Chrome driver implementation)
+│   └── org/openqa/selenium/mock/   ← Local Selenium-style demonstration classes
+│       ├── WebDriver.java
+│       ├── ChromeOptions.java
+│       └── ChromeDriver.java
 │
 ├── target/classes/                 ← Compiled .class files
 ├── pom.xml                         ← Maven configuration
@@ -40,7 +40,6 @@ The project uses the latest versions of key libraries:
 | Dependency | Version | Purpose |
 |---|---|---|
 | **Selenium Java** | 4.45.0 | Browser automation framework |
-| **WebDriverManager** | 6.3.4 | Automatic WebDriver management |
 | **JUnit** | 4.13.2 | Unit testing framework |
 
 All dependencies are configured in `pom.xml` for automatic download.
@@ -78,10 +77,9 @@ Collection of 80+ programs covering:
 - Pattern Matching
 - Number Operations (Prime, Armstrong, Fibonacci)
 
-### Selenium Framework (`org/openqa/selenium/`)
-- **WebDriver.java** - Interface defining browser operations
-- **ChromeOptions.java** - Browser configuration with convenience methods
-- **ChromeDriver.java** - Chrome driver implementation
+### Selenium examples
+- **PrintLinks.java** - Opens a page with Selenium and prints unique anchor URLs.
+- The Selenium API is supplied by the `selenium-java` Maven dependency; this project does not redefine Selenium classes.
 
 ---
 

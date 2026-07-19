@@ -1,4 +1,4 @@
-package org.openqa.selenium;
+package org.openqa.selenium.mock;
 
 import java.util.ArrayList;
 import java.util.List;

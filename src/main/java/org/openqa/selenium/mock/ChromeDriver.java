@@ -1,4 +1,4 @@
-package org.openqa.selenium;
+package org.openqa.selenium.mock;
 
 /**
  * Optimized ChromeDriver implementation for Chrome browser automation.
