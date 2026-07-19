@@ -27,6 +27,20 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Selenium WebDriver (Latest) -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.45.0</version>
+        </dependency>
+
+        <!-- WebDriverManager for automatic driver management -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>6.3.4</version>
+        </dependency>
     </dependencies>
 
     <build>

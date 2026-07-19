@@ -1,18 +1,26 @@
 # Important Programs for Interview
 
-Essential Java programs for interview preparation.
+Essential Java programs for interview preparation, including core Java concepts and **Selenium WebDriver** framework for browser automation.
 
 ## Project Structure
 
-This project uses **Maven** for build management and dependency resolution.
-
 ```
-src/
-├── main/
-│   └── java/
-│       └── com/interview/  ← All Java source files here
-└── test/
-    └── java/
+JavaImportantPrograms/
+├── src/main/java/
+│   ├── com/interview/              ← Core Java programs (80+ files)
+│   │   ├── ArrayListSorting.java
+│   │   ├── AnagramProgram.java
+│   │   ├── PrimeNumber.java
+│   │   └── ... (more programs)
+│   │
+│   └── org/openqa/selenium/        ← Selenium Framework
+│       ├── WebDriver.java          (Interface for browser control)
+│       ├── ChromeOptions.java      (Chrome browser configuration)
+│       └── ChromeDriver.java       (Chrome driver implementation)
+│
+├── target/classes/                 ← Compiled .class files
+├── pom.xml                         ← Maven configuration
+└── README.md                       ← Documentation
 ```
 
 ---
@@ -20,20 +28,115 @@ src/
 ## Prerequisites
 
 - **Java 21 or higher** - [Download JDK](https://docs.aws.amazon.com/corretto/)
-- **Maven 3.6+** - [Download Maven](https://maven.apache.org/download.cgi)
+- **Maven 3.9+** - [Download Maven](https://maven.apache.org/download.cgi)
 - **Git** - [Download Git](https://git-scm.com/downloads)
 
 ---
 
-## Getting Started
+## Dependencies
 
-### Clone the Repository
+The project uses the latest versions of key libraries:
 
+| Dependency | Version | Purpose |
+|---|---|---|
+| **Selenium Java** | 4.45.0 | Browser automation framework |
+| **WebDriverManager** | 6.3.4 | Automatic WebDriver management |
+| **JUnit** | 4.13.2 | Unit testing framework |
+
+All dependencies are configured in `pom.xml` for automatic download.
+
+---
+
+## Setup Instructions
+
+### 1. Clone/Open Project
 ```bash
-git clone https://github.com/ArulMani767/Important-Programs-for-interview.git
+cd C:\JavaImportantPrograms
 ```
 
-Then open the cloned folder in your preferred IDE (see below).
+### 2. Build Project with Maven
+```bash
+mvn clean install
+```
+
+### 3. View Compiled Classes
+```bash
+# .class files are generated in:
+target/classes/com/interview/
+target/classes/org/openqa/selenium/
+```
+
+---
+
+## Framework Components
+
+### Core Java Programs (`com/interview/`)
+Collection of 80+ programs covering:
+- Data Structures (Arrays, ArrayLists, LinkedLists)
+- Algorithms (Sorting, Searching, Recursion)
+- String Operations (Anagrams, Palindromes, Reversals)
+- Pattern Matching
+- Number Operations (Prime, Armstrong, Fibonacci)
+
+### Selenium Framework (`org/openqa/selenium/`)
+- **WebDriver.java** - Interface defining browser operations
+- **ChromeOptions.java** - Browser configuration with convenience methods
+- **ChromeDriver.java** - Chrome driver implementation
+
+---
+
+## Build Commands
+
+### Using Maven
+```bash
+# Clean and compile all files
+mvn clean compile
+
+# Run unit tests
+mvn test
+
+# Create package
+mvn package
+```
+
+### Direct Compilation
+```bash
+cd src/main/java
+
+# Compile specific file
+javac org/openqa/selenium/ChromeOptions.java -d ../../../target/classes/
+
+# Compile all Selenium files
+javac org/openqa/selenium/*.java -d ../../../target/classes/
+```
+
+---
+
+## Available ChromeOptions Methods
+
+The ChromeOptions class provides these convenience methods:
+- `disableNotifications()` - Block push notifications
+- `disablePopupBlocking()` - Allow popups
+- `disableInfobars()` - Remove Chrome info bars
+- `startMaximized()` - Start with maximized window
+- `disableExtensions()` - Disable browser extensions
+- `incognito()` - Enable private/incognito mode
+- `ignoreCertificateErrors()` - Bypass SSL errors
+- `allowRemoteOrigins()` - Allow remote origins
+- `setHeadless()` - Run without GUI
+- `setWindowSize(width, height)` - Set window dimensions
+
+---
+
+## Project Structure Guide
+
+| Directory | Contents |
+|---|---|
+| `src/main/java/com/interview/` | Core Java programs (80+ files) |
+| `src/main/java/org/openqa/selenium/` | Selenium WebDriver framework |
+| `src/test/java/` | Test files |
+| `target/classes/` | Compiled .class files |
+| `pom.xml` | Maven dependencies & configuration |
 
 ---
 
@@ -44,15 +147,18 @@ Then open the cloned folder in your preferred IDE (see below).
 1. Go to **File → Import → Git → Projects from Git (with smart import)** → Next
 2. Select **Clone URI** → Next
 3. In the **URI field**, paste:
-   ```
-   https://github.com/ArulMani767/Important-Programs-for-interview.git
-   ```
-   > ⚠️ After pasting, the following fields must auto-fill like this — do not edit them manually:
-   > - **URI:** `https://github.com/ArulMani767/Important-Programs-for-interview.git`
-   > - **Host:** `github.com`
-   > - **Repository path:** `/ArulMani767/Important-Programs-for-interview.git`
-   >
-   > If the Repository path looks duplicated or incorrect, click **Back**, clear the URI field (`Ctrl+A` → `Delete`), and paste the URL again.
+```
+https://github.com/ArulMani767/Important-Programs-for-interview.git
+```
+
+> ⚠️ After pasting, the following fields must auto-fill like this — do not edit them manually:
+> 
+> - **URI:** `https://github.com/ArulMani767/Important-Programs-for-interview.git`
+> - **Host:** `github.com`
+> - **Repository path:** `/ArulMani767/Important-Programs-for-interview.git`
+> 
+> If the Repository path looks duplicated or incorrect, click **Back**, clear the URI field (`Ctrl+A` → `Delete`), and paste the URL again.
+
 4. Enter your GitHub **username** and **Personal Access Token** as the password → Next
 5. Select branch **main** → Next
 6. Choose a local directory → Next
@@ -64,10 +170,12 @@ Then open the cloned folder in your preferred IDE (see below).
 
 1. Go to **File → New → Project from Version Control**
 2. In the **URL field**, paste:
-   ```
-   https://github.com/ArulMani767/Important-Programs-for-interview.git
-   ```
-   > ⚠️ Paste only in the URL field. The directory field will auto-fill — do not modify it unless you want a custom save location.
+```
+https://github.com/ArulMani767/Important-Programs-for-interview.git
+```
+
+> ⚠️ Paste only in the URL field. The directory field will auto-fill — do not modify it unless you want a custom save location.
+
 3. Click **Clone**
 4. Click **Open as Maven Project** when prompted → Done
 
@@ -77,9 +185,9 @@ Then open the cloned folder in your preferred IDE (see below).
 
 1. Open Command Palette (`Ctrl+Shift+P`) → type **Git: Clone**
 2. Paste:
-   ```
-   https://github.com/ArulMani767/Important-Programs-for-interview.git
-   ```
+```
+https://github.com/ArulMani767/Important-Programs-for-interview.git
+```
 3. Press **Enter** → choose a local folder to clone into
 4. Click **Open** when prompted
 5. Install **Extension Pack for Java** if not already installed
@@ -91,66 +199,53 @@ Then open the cloned folder in your preferred IDE (see below).
 
 1. Go to **File → New → Project from Version Control**
 2. In the **URL field**, paste:
-   ```
-   https://github.com/ArulMani767/Important-Programs-for-interview.git
-   ```
-   > ⚠️ Paste only in the URL field — do not click into other fields before pasting.
+```
+https://github.com/ArulMani767/Important-Programs-for-interview.git
+```
+
+> ⚠️ Paste only in the URL field — do not click into other fields before pasting.
+
 3. Click **Clone** → Done
 
 ---
 
-## Build & Run
+## Common Build Issues & Solutions
 
-```bash
-# Compile the project
-mvn clean compile
-
-# Run tests
-mvn test
-
-# Build a JAR
-mvn package
-
-# Clean build artifacts
-mvn clean
-```
-
-To run a program, navigate to `src/main/java/com/interview/`, open any `.java` file and use your IDE's **Run** button.
+| Problem | Solution |
+|---------|----------|
+| `mvn: command not found` | Install Maven 3.9+, add to system PATH |
+| Compilation failed | Run `mvn clean compile` |
+| Import errors in IDE | Run `mvn clean install` |
+| Java version error | Install JDK 21 or higher |
+| Selenium methods not found | Ensure pom.xml has correct Selenium version |
 
 ---
 
-## Troubleshooting
+## Key Features
 
-### Repository path appears duplicated in Eclipse
-- This happens when the URL is pasted into the wrong field or pasted twice
-- Click **Back**, clear the URI field completely (`Ctrl+A` → `Delete`), and paste the URL once in the URI field only
-- After pasting correctly, the fields should show:
-  - **URI:** `https://github.com/ArulMani767/Important-Programs-for-interview.git`
-  - **Host:** `github.com`
-  - **Repository path:** `/ArulMani767/Important-Programs-for-interview.git`
+✅ **80+ Core Java Programs**
+- Data Structures (Arrays, Lists, Maps, Sets)
+- Algorithms (Sorting, Searching, Recursion)
+- String Operations (Palindromes, Anagrams, Reversals)
+- Pattern Matching
+- Number Operations (Prime, Fibonacci, Armstrong)
 
-### Authentication error when cloning inside IDE
-- Use your GitHub **username** and a **Personal Access Token** as the password (not your GitHub account password)
-- Generate token: **GitHub → Settings → Developer Settings → Personal Access Tokens → Tokens (Classic)**
-- Required scope: ✅ `repo`
+✅ **Selenium WebDriver Framework**
+- Simple WebDriver interface for browser control
+- Chrome browser automation support
+- Configuration management with convenience methods
+- Fluent API with method chaining
 
-### Build errors after import
-- Run `mvn clean compile` in the terminal inside the project folder
-
-### Java version errors
-- Ensure JDK 21+ is installed: `java -version`
-- Point your IDE to JDK 21 in IDE/Project settings
-
-### Maven not found
-- Install Maven and add it to your system PATH
-- Verify: `mvn --version`
-- Restart your IDE after updating PATH
+✅ **Maven Build System**
+- Automatic dependency management
+- Latest library versions
+- Easy IDE integration
 
 ---
 
-## Features
+## Learn More
 
-- ✅ Maven project structure (Java 21)
-- ✅ JDK 21 compatibility configured in `pom.xml`
-- ✅ Compatible with Eclipse, IntelliJ IDEA, VS Code, and all Maven-supported IDEs
-- ✅ 60+ essential Java interview programs
+- [Java 21 Documentation](https://docs.oracle.com/en/java/javase/21/)
+- [Selenium Official Site](https://www.selenium.dev/)
+- [Maven Guide](https://maven.apache.org/guides/)
+- [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
