@@ -12,11 +12,6 @@ JavaImportantPrograms/
 │   │   ├── AnagramProgram.java
 │   │   ├── PrimeNumber.java
 │   │   └── ... (more programs)
-│   │
-│   └── org/openqa/selenium/mock/   ← Local Selenium-style demonstration classes
-│       ├── WebDriver.java
-│       ├── ChromeOptions.java
-│       └── ChromeDriver.java
 │
 ├── target/classes/                 ← Compiled .class files
 ├── pom.xml                         ← Maven configuration
@@ -100,7 +95,6 @@ cd src/main/java
 | Directory | Contents |
 |---|---|
 | `src/main/java/com/interview/` | Core Java programs (80+ files) |
-| `src/main/java/org/openqa/selenium/` | Selenium WebDriver framework |
 | `src/test/java/` | Test files |
 | `target/classes/` | Compiled .class files |
 | `pom.xml` | Maven dependencies & configuration |
