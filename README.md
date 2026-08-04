@@ -176,5 +176,5 @@ mvn test
 
 - [Java 21 Documentation](https://docs.oracle.com/en/java/javase/21/)
 - [Maven Guide](https://maven.apache.org/guides/)
-- [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
+
 
