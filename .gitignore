@@ -18,6 +18,7 @@ bin/
 .classpath
 .project
 .settings/
+.vscode/
 .idea/
 *.iml
 *.iws
