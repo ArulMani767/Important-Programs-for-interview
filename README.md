@@ -31,17 +31,6 @@ JavaImportantPrograms/
 - **Maven 3.9+** - [Download Maven](https://maven.apache.org/download.cgi)
 - **Git** - [Download Git](https://git-scm.com/downloads)
 
-## Dependencies
-
-The project uses the latest versions of key libraries:
-
-| Dependency | Version | Purpose |
-|---|---|---|
-| **Selenium Java** | 4.45.0 | Browser automation framework |
-| **JUnit** | 4.13.2 | Unit testing framework |
-
-All dependencies are configured in `pom.xml` for automatic download.
-
 ## IDE Setup
 
 ### Eclipse
