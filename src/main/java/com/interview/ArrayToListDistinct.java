@@ -3,6 +3,7 @@ package com.interview;
 import java.util.*;
 
 public class ArrayToListDistinct {
+    // input 1 2 2 3 4 4 5
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
             System.out.println("Enter elements for the first array separated by spaces:");

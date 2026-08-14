@@ -1,0 +1,33 @@
+package com.interview;
+
+import java.util.Scanner;
+
+public class PalindromeCheckForString {
+    public static void main(String[] args) {
+        // Try-with-resources handles automatic scanner closure
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter a string: ");
+            String input = sc.nextLine();
+
+            // Remove spaces and convert to lowercase
+            String cleaned = input.replace(" ", "").toLowerCase();
+            int len = cleaned.length();
+            boolean isPalindrome = true;
+
+            // Compare characters from start and end moving toward the middle
+            for (int i = 0; i < len / 2; i++) {
+                if (cleaned.charAt(i) != cleaned.charAt(len - 1 - i)) {
+                    isPalindrome = false;
+                    break;
+                }
+            }
+
+            // Output result
+            if (isPalindrome) {
+                System.out.println("\"" + input + "\" is a palindrome.");
+            } else {
+                System.out.println("\"" + input + "\" is NOT a palindrome.");
+            }
+        }
+    }
+}

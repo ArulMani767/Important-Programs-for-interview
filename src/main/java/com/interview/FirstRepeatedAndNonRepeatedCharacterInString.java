@@ -1,9 +1,9 @@
 package com.interview;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.*;
 import java.util.stream.*;
+
+//input swiss
 
 public class FirstRepeatedAndNonRepeatedCharacterInString {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class FirstRepeatedAndNonRepeatedCharacterInString {
             var input = sc.nextLine();
 
             // Step 1: Count character frequencies while keeping their exact order
-            Map<Character, Long> charCountMap = input.chars()
+            var charCountMap = input.chars()
                     .mapToObj(c -> (char) c)
                     .collect(Collectors.groupingBy(
                             e->e,

@@ -3,6 +3,8 @@ package com.interview;
 import java.util.*;
 import java.util.stream.*;
 
+// inputs s1= apple banana cherry date
+// s2= banana date elderberry fig
 public class CommonElementsBetweenTwoStringArrays {
     public static void main(String[] args) {
         // Try-with-resources automatically manages the scanner's lifecycle

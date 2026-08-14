@@ -5,7 +5,7 @@ import java.util.*;
 
 public class AnagramProgram {
     //inputs
-    //Hitler Woman  Mother In Lawl
+    //Hitler Woman  Mother In Law
     static void anagram(String s1, String s2) {
         var white = s1.replaceAll("\\s", "");
         var white2 = s2.replaceAll("\\s", "");

@@ -2,8 +2,7 @@ package com.interview;
 
 import java.util.stream.*;
 import java.util.*;
-import java.util.Set;
-
+//s1 = hello s2 = world o/p :  [l, o]
 public class CommonCharactersBetweenTwoStrings {
     public static void main(String[] args) {
         // Try-with-resources manages the scanner lifecycle cleanly

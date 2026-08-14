@@ -1,8 +1,10 @@
 package com.interview;
 
-import java.util.HashSet;
 import java.util.*;
 
+// input 
+// first array a a b b c c
+//second array b b c c d d
 public class CommonCharactersBetweenArrays {
 
     // actually intersection of arrays and common elements between arrays are the same thing, but the naming is different.

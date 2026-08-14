@@ -6,6 +6,9 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+//input 10 20 10 30 20 40 10
+
+
 public class FindDuplicatesFromArray {
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
