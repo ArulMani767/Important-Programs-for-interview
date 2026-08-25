@@ -10,7 +10,7 @@ public class ReverseEachWordInString {
             var input = sc.nextLine();
 
             // UNCHANGED LOGIC: Your exact for-each loop and printing steps
-            for (String w : input.split(" ")) {
+            for (String w : input.split("\\s+")) {
                 System.out.print(new StringBuilder(w).reverse() + " ");
             }
         }
