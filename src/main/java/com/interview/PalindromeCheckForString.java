@@ -7,12 +7,12 @@ public class PalindromeCheckForString {
         // Try-with-resources handles automatic scanner closure
         try (Scanner sc = new Scanner(System.in)) {
             System.out.print("Enter a string: ");
-            String input = sc.nextLine();
+            var input = sc.nextLine();
 
             // Remove spaces and convert to lowercase
-            String cleaned = input.replace(" ", "").toLowerCase();
+            var cleaned = input.replace(" ", "").toLowerCase();
             int len = cleaned.length();
-            boolean isPalindrome = true;
+            var isPalindrome = true;
 
             // Compare characters from start and end moving toward the middle
             for (int i = 0; i < len / 2; i++) {
