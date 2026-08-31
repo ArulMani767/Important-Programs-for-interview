@@ -4,12 +4,13 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.*;
 
-public class IntersectionOfTwoArraysUsingRetainAll {
+public class IntersectionOfTwoIntegerArraysUsingRetainAll {
 
     //inputs 
 
      // Integer[] i1 = {1, 2, 3, 4, 5, 4};
 
+     //intersection and common characters between two integer arrays are same 
  
 
        // Integer[] i2 = {3, 4, 5, 6, 7, 4};

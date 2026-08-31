@@ -8,7 +8,7 @@ public class ReverseanArray {
 		try (var sc = new Scanner(System.in)) {
 			System.out.println("enter the array to reverse elements"); // Fixed description
 			var input = sc.nextLine();
-			var arr = input.trim().split("\\s+");
+		    var arr=input.toCharArray();
 			var result = new StringBuilder();
 
 			// FIX: Loop backwards through the array to build the reversed string

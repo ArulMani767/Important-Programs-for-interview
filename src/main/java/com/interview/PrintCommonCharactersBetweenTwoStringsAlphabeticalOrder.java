@@ -9,14 +9,16 @@ public class PrintCommonCharactersBetweenTwoStringsAlphabeticalOrder {
         try (var sc = new Scanner(System.in)) {
             System.out.println("Enter two input strings :");
             var firstString = sc.nextLine();
+            var spaces=firstString.replaceAll("\\s+", "");
             var secondString = sc.nextLine();
+            var space2=secondString.replaceAll("\\s+", "");
 
             // 1. Map clean strings to sorted TreeSets using Streams
-            var firstSet = firstString.replaceAll("\\s+", "").chars()
+            var firstSet =spaces.chars()
                     .mapToObj(c -> (char) c)
                     .collect(Collectors.toCollection(TreeSet::new));
 
-            var secondSet = secondString.replaceAll("\\s+", "").chars()
+            var secondSet = space2.chars()
                     .mapToObj(c -> (char) c)
                     .collect(Collectors.toCollection(TreeSet::new));
 

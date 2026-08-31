@@ -5,7 +5,7 @@ import java.util.*;
 // input 
 // first array a a b b c c
 //second array b b c c d d
-public class CommonCharactersBetweenArrays {
+public class CommonCharactersBetweenTwoStringArrays {
 
     // actually intersection of arrays and common elements between arrays are the same thing, but the naming is different.
     public static void main(String[] args) {

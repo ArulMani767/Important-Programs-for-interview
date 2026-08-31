@@ -3,39 +3,31 @@ package com.interview;
 import java.util.Scanner;
 
 public class GivenNumberisBinaryOrNot {
-    //inputs 10110101 is binary nuber and 123456 is not binary number
-    static void isBinaryOrNot(int number) {
-        // Initializing flag and copy variable using 'var'
-        var isBinary = true;
-        var copyOfNumber = number;
-
-        while (copyOfNumber != 0) {
-            var temp = copyOfNumber % 10; // Gives last digit of the number
-
-            if (temp > 1) {
-                isBinary = false;
-                break;
-            } else {
-                copyOfNumber = copyOfNumber / 10; // Removes last digit from the number
-            }
-        }
-
-        // UNCHANGED LOGIC: Printing the final outcome evaluation
-        if (isBinary) {
-            System.out.println(number + " is a binary number");
-        } else {
-            System.out.println(number + " is not a binary number");
-        }
-    }
-
+    // inputs 10110101 is binary nuber and 123456 is not binary number
     public static void main(String[] args) {
-        // Try-with-resources manages the scanner lifecycle safely and automatically
         try (var sc = new Scanner(System.in)) {
             System.out.print("Enter an integer to verify: ");
-            var userInput = sc.nextInt();
+            var n = sc.nextInt();
 
-            // Pass the scanned int directly into your unchanged logic method
-            isBinaryOrNot(userInput);
+            var isBinary = true;
+            var copy = n;
+
+            while (copy != 0) {
+                var temp = copy % 10; // Extracts the last digit
+
+                if (temp > 1) {
+                    isBinary = false;
+                    break;
+                } else {
+                    copy = copy / 10; // Truncates the last digit
+                }
+            }
+
+            if (isBinary) {
+                System.out.println(n + " is a binary number");
+            } else {
+                System.out.println(n + " is not a binary number");
+            }
         }
     }
 }
