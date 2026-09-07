@@ -1,38 +1,30 @@
 package com.interview;
 
-import java.util.HashSet;
 import java.util.*;
 
 public class LongestSubStringWithoutRepeatingCharacters {
     public static void main(String[] args) {
-        // Try-with-resources manages the scanner lifecycle automatically
-        try (var sc = new Scanner(System.in)) {
+       try (var sc = new Scanner(System.in)) {
             System.out.print("Enter a string: ");
             var input = sc.nextLine();
 
-            var charSet = new HashSet<Character>();
+            var map = new HashMap<Character, Integer>();
             var maxLength = 0;
-            var leftPointer = 0;
+            var left = 0;
 
-            // The right pointer expands the window character by character
-            for (var rightPointer = 0; rightPointer < input.length(); rightPointer++) {
-                var currentRepeatedChar = input.charAt(rightPointer);
+            for (var right = 0; right < input.length(); right++) {
+                var ch = input.charAt(right);
 
-                // If the character is already in our set, shrink the window from the left
-                while (charSet.contains(currentRepeatedChar)) {
-                    charSet.remove(input.charAt(leftPointer));
-                    leftPointer++;
+                // If character is already inside the current window, jump 'left' past it
+                if (map.containsKey(ch)) {
+                    left = Math.max(left, map.get(ch) + 1);
                 }
 
-                // Add the new unique character to the current window set
-                charSet.add(currentRepeatedChar);
-
-                // Calculate the size of the current window and update our maximum record
-                var currentWindowSize = rightPointer - leftPointer + 1;
-                maxLength = Math.max(maxLength, currentWindowSize);
+                map.put(ch, right);
+                maxLength = Math.max(maxLength, right - left + 1);
             }
 
-            System.out.println("Length of the longest substring without repeating characters: " + maxLength);
+            System.out.println("Max length: " + maxLength);
         }
     }
 }

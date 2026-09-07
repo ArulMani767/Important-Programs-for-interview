@@ -1,22 +1,21 @@
 package com.interview;
 
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.*;
+
 
 public class IntersectionOfTwoIntegerArraysUsingRetainAll {
 
-    //inputs 
+    // inputs
 
-     // Integer[] i1 = {1, 2, 3, 4, 5, 4};
+    // Integer[] i1 = {1, 2, 3, 4, 5, 4};
 
-     //intersection and common characters between two integer arrays are same 
- 
+    // intersection and common characters between two integer arrays are same
 
-       // Integer[] i2 = {3, 4, 5, 6, 7, 4};
+    // Integer[] i2 = {3, 4, 5, 6, 7, 4};
     public static void main(String[] args) {
 
         try (var sc = new Scanner(System.in)) {
+            // 1. Input for the first array
             // 1. Input for the first array
             System.out.print("Enter the size of the first array: ");
             var size1 = sc.nextInt();
@@ -36,10 +35,17 @@ public class IntersectionOfTwoIntegerArraysUsingRetainAll {
             }
 
             // UNCHANGED LOGIC: Your exact HashSet collection and retainAll steps
-            HashSet<Integer> set1 = new HashSet<>(Arrays.asList(i1));
+           var set1 = new HashSet<>();
+            for (var num : i1) {
+                set1.add(num);
+            }
 
-            HashSet<Integer> set2 = new HashSet<>(Arrays.asList(i2));
+            var set2 = new HashSet<>();
+            for (var num : i2) {
+                set2.add(num);
+            }
 
+            // Retain common elements
             set1.retainAll(set2);
 
             System.out.println(set1);
