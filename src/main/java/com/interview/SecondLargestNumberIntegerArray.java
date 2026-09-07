@@ -3,37 +3,39 @@ package com.interview;
 import java.util.*;
 
 public class SecondLargestNumberIntegerArray {
-    static int secondLargest(int[] input) {
-        // SIMPLIFIED INITIALIZATION: Start with the lowest possible values
-        var firstLargest = Integer.MIN_VALUE;
-        var secondLargest = Integer.MIN_VALUE;
-
-        // Clean for-each loop scans every element seamlessly
-        for (var num : input) {
-            if (num > firstLargest) {
-                secondLargest = firstLargest;
-                firstLargest = num;
-            } else if (num < firstLargest && num > secondLargest) {
-                secondLargest = num;
-            }
-        }
-
-        return secondLargest;
-    }
-
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
-            System.out.print("Enter the size of the array: ");
+            System.out.println("Enter the size of the array:");
             var size = sc.nextInt();
 
-            var array = new int[size];
-            System.out.println("Enter " + size + " integers:");
-            for (var i = 0; i < size; i++) {
-                array[i] = sc.nextInt();
+            var input = new int[size];
+            System.out.println("Enter the array elements:");
+            for (int i = 0; i < size; i++) {
+                input[i] = sc.nextInt();
             }
 
-            var result = secondLargest(array);
-            System.out.println("The second largest number is: " + result);
+            // Initialize both to the smallest possible integer
+            var max = Integer.MIN_VALUE;
+            var secondMax = Integer.MIN_VALUE;
+
+            for (int i = 0; i < input.length; i++) {
+                if (input[i] > max) {
+                    // Previous max now becomes the second largest
+                    secondMax = max;
+                    max = input[i];
+                } else if (input[i] > secondMax && input[i] != max) {
+                    // Element is smaller than max, but larger than current secondMax
+                    secondMax = input[i];
+                }
+            }
+
+            if (secondMax == Integer.MIN_VALUE) {
+                System.out.println("No distinct second largest element found (all elements are equal).");
+            } else {
+                System.out.println("Largest: " + max);
+                System.out.println("Second Largest: " + secondMax);
+            }
         }
     }
+
 }
