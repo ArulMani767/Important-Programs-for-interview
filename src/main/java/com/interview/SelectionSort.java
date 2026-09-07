@@ -1,45 +1,54 @@
 package com.interview;
-
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class SelectionSort {
-    public static <T extends Comparable<T>> void selectionSort(T[] arr) {
-        for (var i = 0; i < arr.length - 1; i++) {
-            var pos = i;
-            for (var j = i + 1; j < arr.length; j++) {
-                if (arr[j].compareTo(arr[pos]) < 0) {
-                    pos = j;
+   public static <T extends Comparable<T>> void selectionSort(T[] input) {
+        int n = input.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+
+            for (int j = i + 1; j < n; j++) {
+                // Returns negative if input[j] is smaller than input[minIndex]
+                if (input[j].compareTo(input[minIndex]) < 0) {
+                    minIndex = j;
                 }
             }
-            T temp = arr[i];
-            arr[i] = arr[pos];
-            arr[pos] = temp;
+
+            // In-place generic swap
+            T temp = input[minIndex];
+            input[minIndex] = input[i];
+            input[i] = temp;
         }
     }
 
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
-            System.out.println("Enter elements to sort separated by spaces:");
-            var inputLine = sc.nextLine().trim();
-            var tokens = inputLine.split("\\s+");
+            System.out.println("Enter elements separated by spaces (numbers or words):");
+            var line = sc.nextLine().trim();
 
-            // Check if the first element is a number
+            if (line.isEmpty()) {
+                System.out.println("No input provided.");
+                return;
+            }
+
+            var tokens = line.split("\\s+");
+
+            // Check if the input consists of numbers or strings
             if (tokens[0].matches("-?\\d+")) {
-                // If it's a number, convert to an Integer[] Object array to sort numerically
-                Integer[] intArray = Arrays.stream(tokens)
+                // Map tokens to Integer[] wrapper objects
+                Integer[] numbers = Arrays.stream(tokens)
                         .map(Integer::valueOf)
                         .toArray(Integer[]::new);
 
-                selectionSort(intArray); // Works because Integer implements Comparable
-                System.out.println("Sorted Integers: " + Arrays.toString(intArray));
+                System.out.println("Original Integers: " + Arrays.toString(numbers));
+                selectionSort(numbers);
+                System.out.println("Sorted Integers:   " + Arrays.toString(numbers));
             } else {
-                // Otherwise, treat it as a String[] array to sort alphabetically
-                var lowercaseArray = Arrays.stream(tokens)
-                               .map(String::toLowerCase)
-                               .toArray(String[]::new);
-                selectionSort(lowercaseArray); // Works because String implements Comparable
-                System.out.println("Sorted Strings: " + Arrays.toString(lowercaseArray));
+                // Process directly as String[]
+                System.out.println("Original Strings:  " + Arrays.toString(tokens));
+                selectionSort(tokens);
+                System.out.println("Sorted Strings:    " + Arrays.toString(tokens));
             }
         }
     }
