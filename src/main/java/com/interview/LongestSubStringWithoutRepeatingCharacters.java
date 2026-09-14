@@ -4,24 +4,25 @@ import java.util.*;
 
 public class LongestSubStringWithoutRepeatingCharacters {
     public static void main(String[] args) {
-       try (var sc = new Scanner(System.in)) {
+        try (var sc = new Scanner(System.in)) {
             System.out.print("Enter a string: ");
             var input = sc.nextLine();
 
-            var map = new HashMap<Character, Integer>();
             var maxLength = 0;
             var left = 0;
 
-            for (var right = 0; right < input.length(); right++) {
-                var ch = input.charAt(right);
+            for (var i = 0; i < input.length();i++) {
+                char ch = input.charAt(i);
 
-                // If character is already inside the current window, jump 'left' past it
-                if (map.containsKey(ch)) {
-                    left = Math.max(left, map.get(ch) + 1);
+                // Find the first occurrence of 'ch' starting from the 'left' pointer
+                int firstSeen = input.indexOf(ch, left);
+
+                // If found before 'right', a duplicate exists in the current window
+                if (firstSeen < i) {
+                    left = firstSeen + 1; // Move left past the duplicate
                 }
 
-                map.put(ch, right);
-                maxLength = Math.max(maxLength, right - left + 1);
+                maxLength = Math.max(maxLength, i - left + 1);
             }
 
             System.out.println("Max length: " + maxLength);
