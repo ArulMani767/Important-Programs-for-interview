@@ -1,38 +1,44 @@
 package interview;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class PermutationOfString {
 
-    //input string = "JSP";
-
-    public static void StringPermutation(String input) {
-        StringPermutation("", input);
-    }
-
-    private static void StringPermutation(String permutation, String input) {
-        if (input.isEmpty()) {
-            System.out.println(permutation);
-        } else {
-            for (var i = 0; i < input.length(); i++) {
-                StringPermutation(
-                        permutation + input.charAt(i),
-                        input.substring(0, i) + input.substring(i + 1));
-            }
-        }
-    }
+    // input string = "JSP";
 
     public static void main(String[] args) {
-        // Replaced hardcoded string with dynamic try-with-resources Scanner
         try (var sc = new Scanner(System.in)) {
             System.out.println("Enter a string to find all its permutations:");
-            var userInput = sc.nextLine().trim();
+            var input = sc.nextLine().trim();
 
-            if (!userInput.isEmpty()) {
-                System.out.println("\nPermutations:");
-                StringPermutation(userInput);
-            } else {
+            if (input.isEmpty()) {
                 System.out.println("Input cannot be empty.");
+                return;
+            }
+
+            System.out.println("\nPermutations:");
+
+            List<String> permutations = new ArrayList<>();
+            permutations.add(""); // start with one empty permutation
+
+            for (var i = 0; i < input.length(); i++) {
+                var currentChar = input.charAt(i);
+                List<String> next = new ArrayList<>();
+
+                for (var perm : permutations) {
+                    // insert currentChar into every possible position of perm
+                    for (var pos = 0; pos <= perm.length(); pos++) {
+                        var newPerm = perm.substring(0, pos) + currentChar + perm.substring(pos);
+                        next.add(newPerm);
+                    }
+                }
+                permutations = next;
+            }
+
+            for (var perm : permutations) {
+                System.out.println(perm);
             }
         }
     }
