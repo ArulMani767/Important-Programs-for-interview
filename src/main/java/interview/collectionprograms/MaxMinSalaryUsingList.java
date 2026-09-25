@@ -1,6 +1,7 @@
 package interview.collectionprograms;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class MaxMinSalaryUsingList {
@@ -33,5 +34,10 @@ public class MaxMinSalaryUsingList {
 
         System.out.println("Max salary: " + max);
         System.out.println("Min salary: " + min);
+
+        // var max =
+        // employees.stream().max(Comparator.comparingInt(Employee::salary)).orElse(null);
+        // var min =
+        // employees.stream().min(Comparator.comparingInt(Employee::salary)).orElse(null);
     }
 }
