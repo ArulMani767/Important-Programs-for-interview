@@ -10,7 +10,7 @@ public class PalindromeCheckForString {
             var input = sc.nextLine();
 
             // Remove spaces and convert to lowercase
-            var cleaned = input.replace("[^a-zA-Z0-9]", "").toLowerCase();
+            var cleaned = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
             int len = cleaned.length();
             var isPalindrome = true;
 
