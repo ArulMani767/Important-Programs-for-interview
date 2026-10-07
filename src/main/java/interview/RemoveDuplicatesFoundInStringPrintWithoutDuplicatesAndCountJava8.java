@@ -15,7 +15,7 @@ public class RemoveDuplicatesFoundInStringPrintWithoutDuplicatesAndCountJava8 {
             System.out.println("All character counts: " + charcount);
             
             // Get unique characters (remove duplicates)
-            var unique = input.chars().mapToObj(c -> String.valueOf((char) c)).distinct().collect(Collectors.joining());
+            var unique = input.chars().mapToObj(Character::toString).distinct().collect(Collectors.joining());
             System.out.println("Unique characters: " + unique);
             
             // Get only duplicate characters (count > 1)

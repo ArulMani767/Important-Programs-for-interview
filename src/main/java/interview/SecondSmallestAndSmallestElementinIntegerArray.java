@@ -3,11 +3,11 @@ package interview;
 import java.util.Scanner;
 
 public class SecondSmallestAndSmallestElementinIntegerArray {
-   // Size of the array: 5
-    //inputs 3 7 3 8 4
-    //Console Output:
-//The smallest number is: 3
-//The second smallest number is: 4
+    // Size of the array: 5
+    // inputs 3 7 3 8 4
+    // Console Output:
+    // The smallest number is: 3
+    // The second smallest number is: 4
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
             System.out.print("Enter the size of the array: ");
@@ -18,10 +18,10 @@ public class SecondSmallestAndSmallestElementinIntegerArray {
                 return;
             }
 
-            var array = new int[size];
+            var input = new int[size];
             System.out.println("Enter " + size + " integers:");
             for (var i = 0; i < size; i++) {
-                array[i] = sc.nextInt();
+                input[i] = sc.nextInt();
             }
 
             // INITIALIZATION: Start with the highest possible values for finding minimums
@@ -29,12 +29,12 @@ public class SecondSmallestAndSmallestElementinIntegerArray {
             var secondSmallest = Integer.MAX_VALUE;
 
             // Loop scans every element to track the lowest values
-            for (var num : array) {
-                if (num < smallest) {
+            for (int i = 0; i < input.length; i++) {
+                if (input[i] < smallest) {
                     secondSmallest = smallest;
-                    smallest = num;
-                } else if (num > smallest && num < secondSmallest) {
-                    secondSmallest = num;
+                    smallest = input[i];
+                } else if (input[i] < secondSmallest && input[i] != smallest) {
+                    secondSmallest = input[i];
                 }
             }
 
