@@ -3,6 +3,8 @@ package interview;
 import java.util.*;
 
 public class PrimeNumbersBetweenTwoNumbers {
+
+    // with this logic you can find prime numbers between two numbers between 1 and 100
     public static void main(String[] args) {
         // Try-with-resources handles the scanner lifecycle automatically
         try (var sc = new Scanner(System.in)) {
