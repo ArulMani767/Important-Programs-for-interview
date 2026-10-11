@@ -16,6 +16,8 @@ public class PrimeNumbersBetweenTwoNumbers {
 
             System.out.println("Prime numbers between " + start + " and " + end + " are:");
 
+            // you can use it for prime numbers between any two numbers, not just 1 and 100
+
             // Outer loop: Iterates through every single number in your given range
             for (var currentNum = start; currentNum <= end; currentNum++) {
 

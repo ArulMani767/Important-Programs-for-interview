@@ -1,42 +1,43 @@
 package interview;
 
-import java.util.Arrays;
 import java.util.*;
 
 public class AnagramProgram {
-    //inputs
-    //Hitler Woman  Mother In Law
-    static void anagram(String s1, String s2) {
-        var white = s1.replaceAll("\\s", "");
-        var white2 = s2.replaceAll("\\s", "");
-
-        var status = true;
-
-        if (white.length() != white2.length()) {
-            status = false;
-        } else {
-            var chararray = white.toLowerCase().toCharArray();
-            var chararray2 = white2.toLowerCase().toCharArray();
-            Arrays.sort(chararray);
-            Arrays.sort(chararray2);
-
-            status = Arrays.equals(chararray, chararray2);
-        }
-        if (status) {
-            System.out.println(s1 + " and " + s2 + " are anagrams");
-        } else {
-            System.out.println(s1 + " and " + s2 + " not anagrams");
-        }
-    }
+    // inputs
+    // Hitler Woman Mother In Law
 
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
             System.out.println("Enter first string:");
             var first = sc.nextLine();
+
             System.out.println("Enter second string:");
             var second = sc.nextLine();
-            anagram(first, second);
+
+            // Strip spaces and convert to lowercase
+            var white = first.replaceAll("\\s", "").toLowerCase();
+            var white2 = second.replaceAll("\\s", "").toLowerCase();
+
+            boolean status;
+
+            if (white.length() != white2.length()) {
+                status = false;
+            } else {
+                var charArray1 = white.toCharArray();
+                var charArray2 = white2.toCharArray();
+
+                Arrays.sort(charArray1);
+                Arrays.sort(charArray2);
+
+                status = Arrays.equals(charArray1, charArray2);
+            }
+
+            if (status) {
+                System.out.println(first + " and " + second + " are anagrams");
+            } else {
+                System.out.println(first + " and " + second + " are not anagrams");
+            }
         }
     }
-}
 
+}

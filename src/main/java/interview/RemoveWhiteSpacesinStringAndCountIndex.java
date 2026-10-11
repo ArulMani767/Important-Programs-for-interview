@@ -1,6 +1,6 @@
 package interview;
 
-public class RemoveWhiteSpacesinStringAndIndex {
+public class RemoveWhiteSpacesinStringAndCountIndex {
     public static void main(String[] args) {
 
         String input = "Automation Test Engineer";
