@@ -30,7 +30,7 @@ public class SumOfFirstNPrimeNumbers {
 
                 // If the inner loop finishes and isPrime is still true, we found a prime!
                 if (isPrime) {
-                    sum += currentNumberToCheck; // Add it to our total sum
+                    sum =  sum + currentNumberToCheck; // Add it to our total sum
                     countOfPrimesFound++; // Increment our prime counter
                 }
 

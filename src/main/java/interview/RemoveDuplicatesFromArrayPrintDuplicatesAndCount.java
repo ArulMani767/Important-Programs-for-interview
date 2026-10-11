@@ -11,7 +11,10 @@ public class RemoveDuplicatesFromArrayPrintDuplicatesAndCount {
         try (var sc = new Scanner(System.in)) {
             System.out.println("Enter array elements (space-separated): ");
             var input = sc.nextLine().trim().split("\\s+");
-
+             // without scanner (hard coded) you need to boxed in the stream code 
+             //exmple code: for stream 
+             //var inputBoxed = Arrays.stream(input).boxed()
+             // .collect(Collectors.groupingBy(e -> e, Collectors.counting()));
             // Count occurrences of each element
             var elementCount = Arrays.stream(input)
                     .collect(Collectors.groupingBy(e -> e, Collectors.counting()));

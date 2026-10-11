@@ -8,40 +8,27 @@ public class LongestPalindromeSubstring {
             System.out.print("Enter a string: ");
             var input = sc.nextLine();
 
-            // Clean the string (your logic, unchanged)
+            // Clean the string
             var cleaned = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+            String longest = "";
 
-            String longest = findLongestPalindrome(cleaned);
+            // Check every possible substring combination
+            for (int i = 0; i < cleaned.length(); i++) {
+                for (int j = i + 1; j <= cleaned.length(); j++) {
+
+                    String sub = cleaned.substring(i, j);
+
+                    // 1-Line Palindrome Check using built-in reverse()
+                    String reversed = new StringBuilder(sub).reverse().toString();
+
+                    // If it is a palindrome AND longer than our current record, update it
+                    if (sub.equals(reversed) && sub.length() > longest.length()) {
+                        longest = sub;
+                    }
+                }
+            }
 
             System.out.println("Longest palindromic substring: \"" + longest + "\"");
         }
-    }
-
-    static String findLongestPalindrome(String input) {
-        String longest = "";
-
-        for (int i = 0; i < input.length(); i++) {
-            for (int j = i + 1; j <= input.length(); j++) {
-                String sub = input.substring(i, j);
-
-                if (isPalindrome(sub) && sub.length() > longest.length()) {
-                    longest = sub;
-                }
-            }
-        }
-        return longest;
-    }
-
-    // Your PalindromeCheckForString logic, extracted into a reusable method
-    static boolean isPalindrome(String s) {
-        int left = 0, right = s.length() - 1;
-        while (left < right) {
-            if (s.charAt(left) != s.charAt(right)) {
-                return false;
-            }
-            left++;
-            right--;
-        }
-        return true;
     }
 }

@@ -3,7 +3,7 @@ package interview;
 import java.util.*;
 import java.util.stream.*;
 
-public class CharacterCounter {
+public class StringCharacterCounter {
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
             System.out.println("Enter a string: ");

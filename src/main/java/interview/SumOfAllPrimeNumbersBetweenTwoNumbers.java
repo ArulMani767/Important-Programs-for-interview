@@ -35,7 +35,7 @@ public class SumOfAllPrimeNumbersBetweenTwoNumbers {
 
                 // PRESERVED LOGIC: If verified prime, add it to our running total sum
                 if (isPrime) {
-                    sum += currentNumberToCheck;
+                    sum = sum+ currentNumberToCheck;
                 }
             }
 
