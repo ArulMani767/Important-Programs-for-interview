@@ -33,10 +33,17 @@ public class FirstRepeatedAndNonRepeatedCharacterInString {
                     .findFirst()
                     .orElse(null);
 
+                    var lastNonRepeated = charCountMap.entrySet().stream()
+                    .filter(entry -> entry.getValue() == 1)
+                    .map(Map.Entry::getKey)
+                    .reduce((first, second) -> second) // <--- Keeps overwriting until the last element
+                    .orElse(null);
+
             // Step 4: Display the results
             System.out.println("First Repeated Character: " + (firstRepeated != null ? firstRepeated : "None"));
             System.out
                     .println("First Non-Repeated Character: " + (firstNonRepeated != null ? firstNonRepeated : "None"));
+            System.out.println("Last Non-Repeated Character: " + (lastNonRepeated != null ? lastNonRepeated : "None"));
         }
     }
 }
