@@ -12,20 +12,27 @@ public class RemoveDuplicatesFromIntegerArray {
         // 2. .distinct() filters out duplicates
         // 3. .toArray() collects the result back into a primitive int[] array without
         // boxing
-        int[] uniqueNumbers = IntStream.of(input)
+        /*int[] uniqueNumbers = IntStream.of(input)
                 .distinct()
                 .toArray();
 
-        System.out.println(Arrays.toString(uniqueNumbers)); // Output: [1, 2, 3, 4, 5]
+        System.out.println(Arrays.toString(uniqueNumbers)); // Output: [1, 2, 3, 4, 5] */
 
         // alternative way to create the stream using Arrays.stream()
 
         // int [] input = {1,2,3,4,5,1,2};
 
-        // var duplicates=
-        // Arrays.stream(input).boxed().distinct().collect(Collectors.toList());
+        // for character count
 
-        // System.out.println(duplicates);
+      var count = Arrays.stream(input).boxed()
+                .collect(Collectors.groupingBy(e -> e, Collectors.counting())); 
+
+         var duplicates=
+         Arrays.stream(input).boxed().distinct().collect(Collectors.toList());
+
+         System.out.println(duplicates);
+         System.out.println(count);
+
 
 
 

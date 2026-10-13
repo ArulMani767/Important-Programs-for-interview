@@ -12,7 +12,23 @@ public class ArrayToListDistinct {
             var list = Arrays.asList(arr);
             var uniqueList = list.stream().distinct().toList();
             System.out.println("List without duplicates: " + uniqueList);
+
+            // for hardcoded string array use this code
+            /*
+             * String [] input = {"apple", "banana", "orange", "grapes", "apple", "orange",
+             * "apple"};
+             * 
+             * var list = new ArrayList<>(Arrays.asList(input));
+             * 
+             * var count=
+             * list.stream().collect(Collectors.groupingBy(e->e,Collectors.counting()));
+             * 
+             * var duplicates= list.stream().distinct().collect(Collectors.toList());
+             * 
+             * System.out.println(count);
+             * System.out.println(duplicates);
+             */
+
         }
     }
 }
-
