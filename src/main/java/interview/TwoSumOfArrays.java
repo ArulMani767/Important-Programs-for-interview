@@ -23,7 +23,7 @@ public class TwoSumOfArrays {
             for (var i = 0; i < arr.length; i++) {
                 for (var j = 0; j < arr.length; j++) {
                     if (i != j && arr[i] + arr[j] == target) {
-                        System.out.println("Pair found: " + arr[i] + " + " + arr[j] + " = " + target);
+                       System.out.println(arr[i] +"  " + arr[j]);
                         found = true;
                     }
                 }

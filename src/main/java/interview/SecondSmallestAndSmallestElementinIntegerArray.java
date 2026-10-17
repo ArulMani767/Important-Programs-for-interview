@@ -27,20 +27,27 @@ public class SecondSmallestAndSmallestElementinIntegerArray {
             // INITIALIZATION: Start with the highest possible values for finding minimums
             var smallest = Integer.MAX_VALUE;
             var secondSmallest = Integer.MAX_VALUE;
+            var thirdsmallest = Integer.MAX_VALUE;
 
             // Loop scans every element to track the lowest values
             for (int i = 0; i < input.length; i++) {
                 if (input[i] < smallest) {
+                    thirdsmallest = secondSmallest;
                     secondSmallest = smallest;
                     smallest = input[i];
                 } else if (input[i] < secondSmallest && input[i] != smallest) {
                     secondSmallest = input[i];
+                }
+                else if (input[i] < thirdsmallest && input[i] != secondSmallest && input[i] != smallest) {
+                    thirdsmallest = input[i];
                 }
             }
 
             System.out.println("The smallest number is: " + smallest);
             System.out.println("The second smallest number is: "
                     + (secondSmallest == Integer.MAX_VALUE ? "None" : secondSmallest));
+            System.out.println("The third smallest number is: "
+                    + (thirdsmallest == Integer.MAX_VALUE ? "None" : thirdsmallest));
         }
     }
 }
