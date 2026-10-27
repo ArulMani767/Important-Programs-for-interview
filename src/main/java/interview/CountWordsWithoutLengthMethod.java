@@ -2,7 +2,7 @@ package interview;
 
 import java.util.*;
 
-public class CountNoOfWordsInAStringNoLengthMethod {
+public class CountWordsWithoutLengthMethod {
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
             System.out.println("enter the String");
