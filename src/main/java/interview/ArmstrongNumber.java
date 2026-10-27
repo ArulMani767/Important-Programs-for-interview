@@ -15,6 +15,7 @@ public class ArmstrongNumber {
 
             while (n > 0) {
                 a = n % 10;
+                //arm = arm + (a * a * a * a);
                 arm = arm + (a * a * a);
                 n = n / 10;
             }
