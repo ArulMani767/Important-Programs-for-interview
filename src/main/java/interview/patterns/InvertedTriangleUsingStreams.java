@@ -1,15 +1,15 @@
-package interview;
+package interview.patterns;
 
 import java.util.*;
 import java.util.stream.IntStream;
 
-public class RightAngledTriangleUsingStreams {
+public class InvertedTriangleUsingStreams {
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
             System.out.print("Enter number of rows: ");
             var n = sc.nextInt();
             IntStream.rangeClosed(1, n)
-                    .mapToObj(i -> "*".repeat(i))
+                    .mapToObj(i -> "*".repeat(n - i))
                     .forEach(System.out::println);
         }
     }

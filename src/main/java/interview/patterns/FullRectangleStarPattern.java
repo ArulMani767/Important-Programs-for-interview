@@ -1,4 +1,4 @@
-package interview;
+package interview.patterns;
 
 import java.util.stream.*;
 import java.util.*;

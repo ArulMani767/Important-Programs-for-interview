@@ -1,16 +1,16 @@
-package interview;
+package interview.patterns;
 
-import java.util.*;
 import java.util.stream.*;
+import java.util.*;
 
-public class PyramidProgramUsingStreams {
+public class LeftAngledTriangleUsingStreams {
     public static void main(String[] args) {
         try (var sc = new Scanner(System.in)) {
-            System.out.print("Enter number of rows: ");
+            System.out.println("Enter the number of rows to print: ");
             var n = sc.nextInt();
             IntStream.rangeClosed(1, n)
                     .mapToObj(i -> " ".repeat(n - i)
-                            + "*".repeat(2 * i - 1))
+                            + "*".repeat(i))
                     .forEach(System.out::println);
         }
     }
