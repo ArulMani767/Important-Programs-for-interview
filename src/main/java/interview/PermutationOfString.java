@@ -7,39 +7,37 @@ import java.util.Scanner;
 public class PermutationOfString {
 
     // input string = "JSP";
+    private static void generate(char[] chars, int index) {
+
+        if (index == chars.length) {
+            System.out.println(String.valueOf(chars));
+            return;
+        }
+
+        for (var i = index; i < chars.length; i++) {
+
+            var temp = chars[index];
+            chars[index] = chars[i];
+            chars[i] = temp;
+
+            generate(chars, index + 1);
+
+            temp = chars[index];
+            chars[index] = chars[i];
+            chars[i] = temp;
+        }
+
+    }
 
     public static void main(String[] args) {
+
         try (var sc = new Scanner(System.in)) {
-            System.out.println("Enter a string to find all its permutations:");
-            var input = sc.nextLine().trim();
 
-            if (input.isEmpty()) {
-                System.out.println("Input cannot be empty.");
-                return;
-            }
+            System.out.print("Enter a string: ");
+            var chars = sc.nextLine().trim().toCharArray();
 
-            System.out.println("\nPermutations:");
-
-            List<String> permutations = new ArrayList<>();
-            permutations.add(""); // start with one empty permutation
-
-            for (var i = 0; i < input.length(); i++) {
-                var currentChar = input.charAt(i);
-                List<String> next = new ArrayList<>();
-
-                for (var perm : permutations) {
-                    // insert currentChar into every possible position of perm
-                    for (var pos = 0; pos <= perm.length(); pos++) {
-                        var newPerm = perm.substring(0, pos) + currentChar + perm.substring(pos);
-                        next.add(newPerm);
-                    }
-                }
-                permutations = next;
-            }
-
-            for (var perm : permutations) {
-                System.out.println(perm);
-            }
+            generate(chars, 0);
         }
+
     }
 }

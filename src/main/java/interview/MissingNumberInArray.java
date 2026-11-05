@@ -7,50 +7,46 @@ public class MissingNumberInArray {
     // inputs
     // int n = 8;
 
-    // int[] a = {1, 4, 5, 3, 7, 8, 6};
-    static int sumOfNnumbers(int n) {
-        int sum = (n * (n + 1)) / 2;
-
-        return sum;
-    }
-
-    // Method to calculate sum of all elements of array
-    static int sumOfElements(int[] array) {
-        int sum = 0;
-
-        for (int i = 0; i < array.length; i++) {
-            sum = sum + array[i];
-        }
-
-        return sum;
-    }
-
     public static void main(String[] args) {
         // Try-with-resources cleanly manages the scanner instance automatically
         try (var sc = new Scanner(System.in)) {
+
             System.out.print("Enter the total number of elements expected (n): ");
             var n = sc.nextInt();
 
-            // The size of the array will be n - 1 since one number is missing
-            var arraySize = n - 1;
-            var a = new int[arraySize];
+            // Sum of numbers from 1 to n
+            var sum = n * (n + 1) / 2;
 
-            System.out.println("Enter " + arraySize + " elements:");
-            for (var i = 0; i < arraySize; i++) {
-                a[i] = sc.nextInt();
+            System.out.println("Enter " + (n - 1) + " elements:");
+
+            for (int i = 0; i < n - 1; i++) {
+
+                int num = sc.nextInt(); // Read a number
+
+                sum = sum - num; // Subtract it from the total sum
             }
 
-            // UNCHANGED LOGIC: Your exact steps to find the missing number
-            // Step 1
-            var sumOfNnumbers = sumOfNnumbers(n);
-
-            // Step 2
-            var sumOfElements = sumOfElements(a);
-
-            // Step 3
-            var missingNumber = sumOfNnumbers - sumOfElements;
-
-            System.out.println("Missing Number is = " + missingNumber);
+            System.out.println("Missing Number = " + sum);
         }
+
+        // Alternative approach using Streams (also works when 1 or multiple numbers are
+        // missing)
+        /*
+         * int[] nums = {1, 4, 5, 3, 7, 8, 6};
+         * var expectedN = 8;
+         * 
+         * // For a single missing number using Streams:
+         * var missingSingle = IntStream.rangeClosed(1, expectedN).sum() -
+         * Arrays.stream(nums).sum();
+         * System.out.println("Missing Number = " + missingSingle);
+         * 
+         * // For finding one or multiple missing numbers using Streams:
+         * var present = Arrays.stream(nums).boxed().collect(Collectors.toSet());
+         * var missingAll = IntStream.rangeClosed(1, expectedN)
+         * .filter(x -> !present.contains(x))
+         * .boxed()
+         * .toList();
+         * System.out.println("Missing Numbers = " + missingAll);
+         */
     }
 }
