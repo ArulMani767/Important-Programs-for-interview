@@ -1,60 +1,48 @@
 package interview;
 
-import java.util.Arrays;
 import java.util.*;
+import java.util.stream.IntStream;
 
 public class MergeTwoUnSortedArraysInSortedOrder {
-	//input 
-	//{ 27, 8, 71, -9, 18 } first
-	//{ 12, -7, 18, 9, 37, -1, 21 } second
-	private static int[] mergeArray(int[] a, int[] b) {
-		int[] mergedarray = new int[a.length + b.length];
-		int i = 0, j = 0, k = 0;
-		while (i < a.length) {
-			mergedarray[k] = a[i];
-			i++;
-			k++; 
-		}
-		while (j < b.length) {
-			mergedarray[k] = b[j];
-			j++;
-			k++;
-		}
-		Arrays.sort(mergedarray);
-		return mergedarray;
+    // input
+    // { 27, 8, 71, -9, 18 } first
+    // { 12, -7, 18, 9, 37, -1, 21 } second
 
-	}
+    public static void main(String[] args) {
+        try (var sc = new Scanner(System.in)) {
 
-	public static void main(String[] args) {
-		try (var sc = new Scanner(System.in)) {
-            
             // 1. Gather the first array input
             System.out.print("Enter the size of the first array: ");
             var size1 = sc.nextInt();
-            var first = new int[size1];
+            var input = new int[size1];
             System.out.println("Enter " + size1 + " integers for the first array:");
-            for (var m = 0; m < size1; m++) {
-                first[m] = sc.nextInt();
+            for (var i = 0; i < size1; i++) {
+                input[i] = sc.nextInt();
             }
 
             // 2. Gather the second array input
             System.out.print("Enter the size of the second array: ");
             var size2 = sc.nextInt();
-            var second = new int[size2];
+            var input2 = new int[size2];
             System.out.println("Enter " + size2 + " integers for the second array:");
-            for (var n = 0; n < size2; n++) {
-                second[n] = sc.nextInt();
+            for (var i = 0; i < size2; i++) {
+                input2[i] = sc.nextInt();
             }
 
-            // 3. Process and display using your original logic flow
-            var merged = mergeArray(first, second);
-            
-            System.out.println("First:" + Arrays.toString(first));
-            System.out.println("Second:" + Arrays.toString(second));
-            System.out.println("Merged:" + Arrays.toString(merged));
+            int[] merged = new int[input.length + input2.length];
+            System.arraycopy(input, 0, merged, 0, input.length);
+            System.arraycopy(input2, 0, merged, input.length, input2.length);
+
+            // Optional: Uncomment the line below if you also want the merged array sorted
+            // Arrays.sort(merged);
+
+            // another way in stream
+
+            /* var merged = IntStream.concat(Arrays.stream(arr1), Arrays.stream(arr2)) 
+                    .toArray(); */  // This line merges the two arrays into a single array without sorting
+
         }
 
-	}
+    }
 
 }
-

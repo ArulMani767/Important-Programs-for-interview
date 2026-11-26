@@ -32,6 +32,13 @@ public class MergeSortedTwoArrays {
                     .sorted()
                     .toArray();
 
+                /*   int[] merged = new int[arr1.length + arr2.length];
+            System.arraycopy(arr1, 0, merged, 0, arr1.length);
+            System.arraycopy(arr2, 0, merged, arr1.length, arr2.length); */
+
+            // Optional: Uncomment the line below if you also want the merged array sorted
+            // Arrays.sort(merged);
+
             // 4. Print the result
             System.out.println("Merged Array: " + Arrays.toString(merged));
         }

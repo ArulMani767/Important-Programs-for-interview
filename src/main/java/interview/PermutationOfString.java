@@ -7,37 +7,26 @@ import java.util.Scanner;
 public class PermutationOfString {
 
     // input string = "JSP";
-    private static void generate(char[] chars, int index) {
-
-        if (index == chars.length) {
-            System.out.println(String.valueOf(chars));
-            return;
-        }
-
-        for (var i = index; i < chars.length; i++) {
-
-            var temp = chars[index];
-            chars[index] = chars[i];
-            chars[i] = temp;
-
-            generate(chars, index + 1);
-
-            temp = chars[index];
-            chars[index] = chars[i];
-            chars[i] = temp;
-        }
-
-    }
-
     public static void main(String[] args) {
-
         try (var sc = new Scanner(System.in)) {
-
             System.out.print("Enter a string: ");
-            var chars = sc.nextLine().trim().toCharArray();
+            var str = sc.nextLine();
+           var ch= str.toCharArray();
 
-            generate(chars, 0);
+            var perms = List.of(""); // Java 9+ immutable list initialization
+
+            for (char c : ch) {
+                var nextPerms = new ArrayList<String>();
+                for (var s : perms) {
+                    for (int i = 0; i <= s.length(); i++) {
+                        nextPerms.add(s.substring(0, i) + c + s.substring(i));
+                    }
+                }
+                perms = nextPerms;
+            }
+
+            perms.forEach(System.out::println);
         }
-
     }
+
 }
