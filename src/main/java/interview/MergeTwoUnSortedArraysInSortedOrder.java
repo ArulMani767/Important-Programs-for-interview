@@ -34,12 +34,16 @@ public class MergeTwoUnSortedArraysInSortedOrder {
             System.arraycopy(input2, 0, merged, input.length, input2.length);
 
             // Optional: Uncomment the line below if you also want the merged array sorted
-             Arrays.sort(merged);
+            Arrays.sort(merged);
 
             // another way in stream
 
-            /* var merged = IntStream.concat(Arrays.stream(arr1), Arrays.stream(arr2)) 
-                    .toArray(); */  // This line merges the two arrays into a single array without sorting
+            /*
+             * var merged = IntStream.concat(Arrays.stream(arr1), Arrays.stream(arr2))
+             * .toArray();
+             */ // This line merges the two arrays into a single array without sorting
+
+            System.out.println("Merged Array: " + Arrays.toString(merged));
 
         }
 
