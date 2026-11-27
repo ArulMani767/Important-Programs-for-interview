@@ -34,7 +34,7 @@ public class MergeTwoUnSortedArraysInSortedOrder {
             System.arraycopy(input2, 0, merged, input.length, input2.length);
 
             // Optional: Uncomment the line below if you also want the merged array sorted
-            // Arrays.sort(merged);
+             Arrays.sort(merged);
 
             // another way in stream
 
